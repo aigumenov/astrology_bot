@@ -1,0 +1,156 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+*.pdm.toml
+.pdm.toml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+.idea/
+*.iml
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Project specific
+data/user_data/
+*.json
+*.db
+*.sqlite3
+*.log
+logs/
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Secrets
+*.pem
+*.key
+*.crt
+secrets/
+config/secret_*.py
+
+# Docker
+*.pid
+*.pid.lock
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Uploads and downloads
+uploads/
+downloads/
+media/
+temp/
+tmp/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Testing
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Documentation
+docs/_build/
+site/
+*.mo
+*.pot
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Distribution
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+*.whl
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Profiling data
+.prof
+*.prof
+
+# Airflow
+airflow.db
+webserver_config.py
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+*.tfvars.json

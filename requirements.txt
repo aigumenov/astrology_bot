@@ -1,0 +1,25 @@
+# Основные зависимости
+aiogram>=3.0.0
+kerykeion>=2.0.0
+geopy>=2.3.0
+cairosvg>=2.7.0
+
+# Для работы с ИИ
+openai>=1.0.0
+anthropic>=0.7.0
+
+# Дополнительно
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+apscheduler>=3.10.0
+pillow>=10.0.0
+
+# Разработка
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+ruff>=0.1.0
+
+# Документация
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
