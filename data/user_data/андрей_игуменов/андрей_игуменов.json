@@ -1,0 +1,15 @@
+{
+    "first_name": "Андрей",
+    "last_name": "Игуменов",
+    "birth_date": "25-11-1986",
+    "birth_time": "06-10",
+    "place": "Ростов-на-Дону",
+    "latitude": 47.2357,
+    "longitude": 39.7015,
+    "timezone": "Europe/Moscow",
+    "username": "андрей_игуменов",
+    "user_id": "test_20260821_192827",
+    "registered_at": "2026-08-21T19:28:27.090348",
+    "status": "active",
+    "tariff": "test"
+}

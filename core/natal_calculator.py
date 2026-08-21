@@ -4,8 +4,6 @@
 import logging
 from typing import Dict, Any, Optional, List
 
-from kerykeion import ChartDataFactory
-
 from core.subject_factory import SubjectFactory
 from core.aspects_calculator import AspectsCalculator
 from core.exceptions import ChartCalculationError
@@ -23,7 +21,8 @@ class NatalCalculator:
     def calculate(
         cls,
         user_data: Dict[str, Any],
-        active_points: Optional[List[str]] = None
+        active_points: Optional[List[str]] = None,
+        include_minor_aspects: bool = False
     ) -> Dict[str, Any]:
         """
         Рассчитывает натальную карту по данным пользователя.
@@ -31,6 +30,7 @@ class NatalCalculator:
         Args:
             user_data: Данные пользователя (из JSON)
             active_points: Список планет для расчета (опционально)
+            include_minor_aspects: Включать ли второстепенные аспекты
             
         Returns:
             Dict: Полные данные натальной карты
@@ -41,19 +41,37 @@ class NatalCalculator:
             # 1. Создаем субъект
             subject = SubjectFactory.create_subject_from_user_data(user_data)
             
-            # 2. Создаем данные карты
-            chart_data = ChartDataFactory.create_natal_chart_data(
-                subject,
-                active_points=active_points
+            # 2. Извлекаем положения планет
+            positions = cls._extract_planet_positions(subject)
+            
+            # 3. Извлекаем дома
+            houses = cls._extract_houses(subject)
+            
+            # 4. Извлекаем аспекты (используем уже работающий AspectsCalculator)
+            aspects = AspectsCalculator.calculate_single_chart_aspects(
+                subject, 
+                active_points=active_points,
+                include_minor=include_minor_aspects
             )
             
-            # 3. Извлекаем аспекты
-            aspects = AspectsCalculator.calculate_single_chart_aspects(subject)
+            # 5. Извлекаем асцендент и МЦ
+            ascendant = cls._extract_ascendant(subject)
+            midheaven = cls._extract_midheaven(subject)
             
-            # 4. Формируем структурированный результат
-            result = cls._format_chart_data(subject, chart_data, aspects)
+            # 6. Собираем результат
+            result = {
+                "chart": {
+                    "positions": positions,
+                    "houses": houses,
+                    "aspects": aspects,
+                    "ascendant": ascendant,
+                    "midheaven": midheaven
+                },
+                "elements": cls._calculate_elements(positions),
+                "qualities": cls._calculate_qualities(positions)
+            }
             
-            logger.info(f"Натальная карта рассчитана успешно")
+            logger.info(f"Натальная карта рассчитана успешно. Планет: {len(positions)}, Аспектов: {len(aspects)}")
             return result
             
         except Exception as e:
@@ -61,17 +79,10 @@ class NatalCalculator:
             raise ChartCalculationError(f"Не удалось рассчитать натальную карту: {e}")
     
     @classmethod
-    def _format_chart_data(
-        cls,
-        subject,
-        chart_data,
-        aspects: List[Dict[str, Any]]
-    ) -> Dict[str, Any]:
-        """
-        Форматирует данные карты в структурированный словарь.
-        """
-        # Извлечение положений планет
+    def _extract_planet_positions(cls, subject) -> Dict[str, Any]:
+        """Извлекает положения планет из субъекта."""
         positions = {}
+        
         planet_names = [
             "sun", "moon", "mercury", "venus", "mars",
             "jupiter", "saturn", "uranus", "neptune", "pluto",
@@ -87,63 +98,150 @@ class NatalCalculator:
                 elif name == "lilith":
                     display_name = "Lilith"
                 
+                # Получаем знак (может быть строкой или объектом)
+                sign = getattr(planet, 'sign', 'Unknown')
+                if hasattr(sign, 'sign'):
+                    sign = sign.sign
+                
+                # Получаем позицию
+                position = getattr(planet, 'position', 0)
+                if position == 0 and hasattr(planet, 'abs_pos'):
+                    position = planet.abs_pos % 30
+                
                 positions[display_name] = {
-                    "sign": planet.sign,
-                    "degree": round(getattr(planet, 'position', 0), 2),
+                    "sign": str(sign),
+                    "degree": round(float(position), 2),
                     "house": getattr(planet, 'house', 0),
                     "retrograde": getattr(planet, 'retrograde', False),
-                    "abs_pos": round(getattr(planet, 'abs_pos', 0), 2)
+                    "abs_pos": round(float(getattr(planet, 'abs_pos', 0)), 2)
                 }
         
-        # Извлечение домов
+        return positions
+    
+    @classmethod
+    def _extract_houses(cls, subject) -> Dict[str, Any]:
+        """Извлекает данные домов."""
         houses = {}
+        
         if hasattr(subject, 'houses'):
             for i, house in enumerate(subject.houses, 1):
+                sign = getattr(house, 'sign', 'Unknown')
+                if hasattr(sign, 'sign'):
+                    sign = sign.sign
+                
                 houses[str(i)] = {
-                    "sign": house.sign,
-                    "degree": round(getattr(house, 'position', 0), 2)
+                    "sign": str(sign),
+                    "degree": round(float(getattr(house, 'position', 0)), 2)
                 }
         
-        # Извлечение асцендента и МЦ
-        asc_sign = getattr(subject, 'ascendant', 'Unknown')
-        if hasattr(asc_sign, 'sign'):
-            asc_sign = asc_sign.sign
+        return houses
+    
+    @classmethod
+    def _extract_ascendant(cls, subject) -> Dict[str, Any]:
+        """Извлекает асцендент."""
+        asc_sign = None
+        asc_degree = 0
         
-        asc_degree = getattr(subject, 'ascendant_degree', 0)
-        if asc_degree == 0 and hasattr(subject, 'ascendant') and hasattr(subject.ascendant, 'position'):
-            asc_degree = subject.ascendant.position
+        if hasattr(subject, 'ascendant'):
+            asc = subject.ascendant
+            if hasattr(asc, 'sign'):
+                asc_sign = asc.sign
+                asc_degree = getattr(asc, 'position', 0)
+            else:
+                asc_sign = str(asc)
         
-        mc_sign = getattr(subject, 'midheaven', 'Unknown')
-        if hasattr(mc_sign, 'sign'):
-            mc_sign = mc_sign.sign
+        if asc_sign is None and hasattr(subject, 'asc'):
+            asc_sign = subject.asc
         
-        mc_degree = getattr(subject, 'midheaven_degree', 0)
-        if mc_degree == 0 and hasattr(subject, 'midheaven') and hasattr(subject.midheaven, 'position'):
-            mc_degree = subject.midheaven.position
+        if asc_sign is None and hasattr(subject, 'ascendant_object'):
+            asc_obj = subject.ascendant_object
+            asc_sign = asc_obj.sign
+            asc_degree = asc_obj.position
         
         return {
-            "chart": {
-                "positions": positions,
-                "houses": houses,
-                "aspects": aspects,
-                "ascendant": {
-                    "sign": str(asc_sign),
-                    "degree": round(float(asc_degree), 2)
-                },
-                "midheaven": {
-                    "sign": str(mc_sign),
-                    "degree": round(float(mc_degree), 2)
-                }
-            },
-            "elements": {
-                "fire": getattr(chart_data.element_distribution, 'fire_percentage', 0),
-                "earth": getattr(chart_data.element_distribution, 'earth_percentage', 0),
-                "air": getattr(chart_data.element_distribution, 'air_percentage', 0),
-                "water": getattr(chart_data.element_distribution, 'water_percentage', 0)
-            },
-            "qualities": {
-                "cardinal": getattr(chart_data.quality_distribution, 'cardinal_percentage', 0),
-                "fixed": getattr(chart_data.quality_distribution, 'fixed_percentage', 0),
-                "mutable": getattr(chart_data.quality_distribution, 'mutable_percentage', 0)
-            }
+            "sign": str(asc_sign) if asc_sign else "Unknown",
+            "degree": round(float(asc_degree or 0), 2)
+        }
+    
+    @classmethod
+    def _extract_midheaven(cls, subject) -> Dict[str, Any]:
+        """Извлекает МЦ (Midheaven)."""
+        mc_sign = None
+        mc_degree = 0
+        
+        if hasattr(subject, 'midheaven'):
+            mc = subject.midheaven
+            if hasattr(mc, 'sign'):
+                mc_sign = mc.sign
+                mc_degree = getattr(mc, 'position', 0)
+            else:
+                mc_sign = str(mc)
+        
+        if mc_sign is None and hasattr(subject, 'mc'):
+            mc_sign = subject.mc
+        
+        if mc_sign is None and hasattr(subject, 'midheaven_object'):
+            mc_obj = subject.midheaven_object
+            mc_sign = mc_obj.sign
+            mc_degree = mc_obj.position
+        
+        return {
+            "sign": str(mc_sign) if mc_sign else "Unknown",
+            "degree": round(float(mc_degree or 0), 2)
+        }
+    
+    @classmethod
+    def _calculate_elements(cls, positions: Dict[str, Any]) -> Dict[str, float]:
+        """Рассчитывает распределение стихий."""
+        element_map = {
+            'Aries': 'fire', 'Leo': 'fire', 'Sagittarius': 'fire',
+            'Taurus': 'earth', 'Virgo': 'earth', 'Capricorn': 'earth',
+            'Gemini': 'air', 'Libra': 'air', 'Aquarius': 'air',
+            'Cancer': 'water', 'Scorpio': 'water', 'Pisces': 'water'
+        }
+        
+        element_counts = {'fire': 0, 'earth': 0, 'air': 0, 'water': 0}
+        total = 0
+        
+        for planet_data in positions.values():
+            sign = planet_data.get('sign', '')
+            if sign in element_map:
+                element_counts[element_map[sign]] += 1
+                total += 1
+        
+        if total == 0:
+            return {'fire': 0, 'earth': 0, 'air': 0, 'water': 0}
+        
+        return {
+            'fire': round(element_counts['fire'] / total * 100, 1),
+            'earth': round(element_counts['earth'] / total * 100, 1),
+            'air': round(element_counts['air'] / total * 100, 1),
+            'water': round(element_counts['water'] / total * 100, 1)
+        }
+    
+    @classmethod
+    def _calculate_qualities(cls, positions: Dict[str, Any]) -> Dict[str, float]:
+        """Рассчитывает распределение качеств."""
+        quality_map = {
+            'Aries': 'cardinal', 'Cancer': 'cardinal', 'Libra': 'cardinal', 'Capricorn': 'cardinal',
+            'Taurus': 'fixed', 'Leo': 'fixed', 'Scorpio': 'fixed', 'Aquarius': 'fixed',
+            'Gemini': 'mutable', 'Virgo': 'mutable', 'Sagittarius': 'mutable', 'Pisces': 'mutable'
+        }
+        
+        quality_counts = {'cardinal': 0, 'fixed': 0, 'mutable': 0}
+        total = 0
+        
+        for planet_data in positions.values():
+            sign = planet_data.get('sign', '')
+            if sign in quality_map:
+                quality_counts[quality_map[sign]] += 1
+                total += 1
+        
+        if total == 0:
+            return {'cardinal': 0, 'fixed': 0, 'mutable': 0}
+        
+        return {
+            'cardinal': round(quality_counts['cardinal'] / total * 100, 1),
+            'fixed': round(quality_counts['fixed'] / total * 100, 1),
+            'mutable': round(quality_counts['mutable'] / total * 100, 1)
         }

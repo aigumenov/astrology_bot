@@ -34,7 +34,6 @@ class SubjectFactory:
         latitude: float,
         longitude: float,
         timezone: str = DEFAULT_TIMEZONE,
-        seconds: int = 0,
         **kwargs
     ) -> AstrologicalSubject:
         """
@@ -43,7 +42,7 @@ class SubjectFactory:
         Args:
             name: Имя субъекта
             year, month, day: Дата рождения
-            hour, minute, seconds: Время рождения
+            hour, minute: Время рождения
             latitude, longitude: Координаты места рождения
             timezone: Часовой пояс
             **kwargs: Дополнительные параметры (zodiac_type, houses_system, etc.)
@@ -64,7 +63,6 @@ class SubjectFactory:
                 day=day,
                 hour=hour,
                 minute=minute,
-                seconds=seconds,
                 lat=latitude,
                 lng=longitude,
                 tz_str=timezone,

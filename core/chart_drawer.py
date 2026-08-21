@@ -3,6 +3,8 @@
 """
 import logging
 import sys
+import os
+import shutil
 from pathlib import Path
 from io import StringIO
 from typing import Optional, Dict, Any
@@ -81,47 +83,98 @@ class ChartDrawer:
             
             sys.stdout = old_stdout
             
-            # Получаем SVG-контент
-            svg_content = cls._get_svg_content(chart)
+            # Ищем созданный SVG файл
+            svg_saved = cls._find_and_move_svg(subject.name, filename_svg)
             
-            if svg_content:
-                # Сохраняем SVG
-                with open(filename_svg, 'w', encoding='utf-8') as f:
-                    f.write(svg_content)
-                logger.info(f"SVG сохранен: {filename_svg}")
-            else:
-                # Пробуем найти файл, созданный makeSVG
-                default_path = Path(f"{subject.name} - Natal Chart.svg")
-                if default_path.exists():
-                    default_path.rename(filename_svg)
-                    logger.info(f"SVG перенесен в: {filename_svg}")
-                else:
-                    raise ChartDrawingError("Не удалось получить SVG-контент")
+            if not svg_saved:
+                # Пробуем альтернативные методы сохранения
+                svg_saved = cls._save_svg_alternative(chart, filename_svg)
+            
+            if not svg_saved:
+                raise ChartDrawingError("Не удалось сохранить SVG-файл")
             
             # Конвертируем в PNG
             png_path = cls._convert_to_png(filename_svg, filename_png, width, height)
             
-            if png_path:
+            if png_path and png_path.exists():
                 return png_path
             
-            return filename_svg
+            return filename_svg if filename_svg.exists() else None
             
         except Exception as e:
             logger.error(f"Ошибка генерации изображения: {e}")
             raise ChartDrawingError(f"Не удалось сгенерировать изображение: {e}")
     
     @classmethod
-    def _get_svg_content(cls, chart) -> Optional[str]:
-        """Получает SVG-контент из объекта chart."""
-        if hasattr(chart, 'get_svg'):
-            return chart.get_svg()
-        elif hasattr(chart, 'svg'):
-            return chart.svg
-        elif hasattr(chart, '_svg'):
-            return chart._svg
-        elif hasattr(chart, 'output'):
-            return chart.output
-        return None
+    def _find_and_move_svg(cls, subject_name: str, target_path: Path) -> bool:
+        """Находит SVG файл и перемещает в нужное место."""
+        # Возможные имена файлов
+        possible_names = [
+            f"{subject_name} - Natal Chart.svg",
+            f"{subject_name} Natal Chart.svg",
+            f"{subject_name}-Natal-Chart.svg",
+            f"{subject_name}_natal_chart.svg",
+        ]
+        
+        # Ищем в домашней папке и текущей директории
+        search_dirs = [Path.home(), Path.cwd()]
+        
+        for search_dir in search_dirs:
+            for name in possible_names:
+                file_path = search_dir / name
+                if file_path.exists():
+                    # Перемещаем в целевую папку
+                    shutil.move(str(file_path), str(target_path))
+                    logger.info(f"SVG перемещен из {file_path} в {target_path}")
+                    return True
+        
+        # Ищем по маске
+        for search_dir in search_dirs:
+            matches = list(search_dir.glob("*Natal Chart*.svg"))
+            if matches:
+                shutil.move(str(matches[0]), str(target_path))
+                logger.info(f"SVG перемещен из {matches[0]} в {target_path}")
+                return True
+        
+        return False
+    
+    @classmethod
+    def _save_svg_alternative(cls, chart, target_path: Path) -> bool:
+        """Пробует альтернативные методы сохранения SVG."""
+        try:
+            # Способ 1: save_svg
+            if hasattr(chart, 'save_svg'):
+                chart.save_svg(str(target_path))
+                return True
+        except Exception:
+            pass
+        
+        try:
+            # Способ 2: saveSVG
+            if hasattr(chart, 'saveSVG'):
+                chart.saveSVG(str(target_path))
+                return True
+        except Exception:
+            pass
+        
+        try:
+            # Способ 3: Получаем контент и сохраняем вручную
+            svg_content = None
+            if hasattr(chart, 'get_svg'):
+                svg_content = chart.get_svg()
+            elif hasattr(chart, 'svg'):
+                svg_content = chart.svg
+            elif hasattr(chart, '_svg'):
+                svg_content = chart._svg
+            
+            if svg_content:
+                with open(target_path, 'w', encoding='utf-8') as f:
+                    f.write(svg_content)
+                return True
+        except Exception:
+            pass
+        
+        return False
     
     @classmethod
     def _convert_to_png(
@@ -134,6 +187,10 @@ class ChartDrawer:
         """
         Конвертирует SVG в PNG используя cairosvg.
         """
+        if not svg_path.exists():
+            logger.warning(f"SVG файл не найден: {svg_path}")
+            return None
+            
         try:
             import cairosvg
             
