@@ -17,6 +17,38 @@ class NatalCalculator:
     Рассчитывает полные данные натальной карты.
     """
     
+    # Маппинг знаков к стихиям (на русском и английском)
+    ELEMENT_MAP = {
+        'Овен': 'fire', 'Лев': 'fire', 'Стрелец': 'fire',
+        'Телец': 'earth', 'Дева': 'earth', 'Козерог': 'earth',
+        'Близнецы': 'air', 'Весы': 'air', 'Водолей': 'air',
+        'Рак': 'water', 'Скорпион': 'water', 'Рыбы': 'water',
+        # Английские названия
+        'Aries': 'fire', 'Leo': 'fire', 'Sagittarius': 'fire',
+        'Taurus': 'earth', 'Virgo': 'earth', 'Capricorn': 'earth',
+        'Gemini': 'air', 'Libra': 'air', 'Aquarius': 'air',
+        'Cancer': 'water', 'Scorpio': 'water', 'Pisces': 'water',
+        # Сокращения
+        'Sag': 'fire', 'Vir': 'earth', 'Sco': 'water', 'Aqu': 'air',
+        'Cap': 'earth', 'Lib': 'air', 'Can': 'water', 'Leo': 'fire',
+        'Gem': 'air', 'Tau': 'earth', 'Ari': 'fire', 'Pis': 'water'
+    }
+    
+    # Маппинг знаков к качествам
+    QUALITY_MAP = {
+        'Овен': 'cardinal', 'Рак': 'cardinal', 'Весы': 'cardinal', 'Козерог': 'cardinal',
+        'Телец': 'fixed', 'Лев': 'fixed', 'Скорпион': 'fixed', 'Водолей': 'fixed',
+        'Близнецы': 'mutable', 'Дева': 'mutable', 'Стрелец': 'mutable', 'Рыбы': 'mutable',
+        # Английские названия
+        'Aries': 'cardinal', 'Cancer': 'cardinal', 'Libra': 'cardinal', 'Capricorn': 'cardinal',
+        'Taurus': 'fixed', 'Leo': 'fixed', 'Scorpio': 'fixed', 'Aquarius': 'fixed',
+        'Gemini': 'mutable', 'Virgo': 'mutable', 'Sagittarius': 'mutable', 'Pisces': 'mutable',
+        # Сокращения
+        'Sag': 'mutable', 'Vir': 'mutable', 'Sco': 'fixed', 'Aqu': 'fixed',
+        'Cap': 'cardinal', 'Lib': 'cardinal', 'Can': 'cardinal', 'Leo': 'fixed',
+        'Gem': 'mutable', 'Tau': 'fixed', 'Ari': 'cardinal', 'Pis': 'mutable'
+    }
+    
     @classmethod
     def calculate(
         cls,
@@ -26,14 +58,6 @@ class NatalCalculator:
     ) -> Dict[str, Any]:
         """
         Рассчитывает натальную карту по данным пользователя.
-        
-        Args:
-            user_data: Данные пользователя (из JSON)
-            active_points: Список планет для расчета (опционально)
-            include_minor_aspects: Включать ли второстепенные аспекты
-            
-        Returns:
-            Dict: Полные данные натальной карты
         """
         try:
             logger.info(f"Расчет натальной карты для {user_data.get('username')}")
@@ -47,7 +71,7 @@ class NatalCalculator:
             # 3. Извлекаем дома
             houses = cls._extract_houses(subject)
             
-            # 4. Извлекаем аспекты (используем уже работающий AspectsCalculator)
+            # 4. Извлекаем аспекты
             aspects = AspectsCalculator.calculate_single_chart_aspects(
                 subject, 
                 active_points=active_points,
@@ -58,7 +82,11 @@ class NatalCalculator:
             ascendant = cls._extract_ascendant(subject)
             midheaven = cls._extract_midheaven(subject)
             
-            # 6. Собираем результат
+            # 6. Рассчитываем элементы и качества из positions
+            elements = cls._calculate_elements_from_positions(positions)
+            qualities = cls._calculate_qualities_from_positions(positions)
+            
+            # 7. Собираем результат
             result = {
                 "chart": {
                     "positions": positions,
@@ -67,11 +95,11 @@ class NatalCalculator:
                     "ascendant": ascendant,
                     "midheaven": midheaven
                 },
-                "elements": cls._calculate_elements(positions),
-                "qualities": cls._calculate_qualities(positions)
+                "elements": elements,
+                "qualities": qualities
             }
             
-            logger.info(f"Натальная карта рассчитана успешно. Планет: {len(positions)}, Аспектов: {len(aspects)}")
+            logger.info(f"Натальная карта рассчитана. Планет: {len(positions)}, Домов: {len(houses)}, Аспектов: {len(aspects)}")
             return result
             
         except Exception as e:
@@ -97,21 +125,48 @@ class NatalCalculator:
                     display_name = "North Node"
                 elif name == "lilith":
                     display_name = "Lilith"
+                elif name == "sun":
+                    display_name = "Sun"
+                elif name == "moon":
+                    display_name = "Moon"
+                elif name == "mercury":
+                    display_name = "Mercury"
+                elif name == "venus":
+                    display_name = "Venus"
+                elif name == "mars":
+                    display_name = "Mars"
+                elif name == "jupiter":
+                    display_name = "Jupiter"
+                elif name == "saturn":
+                    display_name = "Saturn"
+                elif name == "uranus":
+                    display_name = "Uranus"
+                elif name == "neptune":
+                    display_name = "Neptune"
+                elif name == "pluto":
+                    display_name = "Pluto"
                 
-                # Получаем знак (может быть строкой или объектом)
+                # Получаем знак
                 sign = getattr(planet, 'sign', 'Unknown')
                 if hasattr(sign, 'sign'):
                     sign = sign.sign
+                elif hasattr(sign, '__str__'):
+                    sign = str(sign)
                 
                 # Получаем позицию
                 position = getattr(planet, 'position', 0)
                 if position == 0 and hasattr(planet, 'abs_pos'):
                     position = planet.abs_pos % 30
                 
+                # Получаем дом
+                house = getattr(planet, 'house', 0)
+                if hasattr(house, 'house'):
+                    house = house.house
+                
                 positions[display_name] = {
                     "sign": str(sign),
                     "degree": round(float(position), 2),
-                    "house": getattr(planet, 'house', 0),
+                    "house": house,
                     "retrograde": getattr(planet, 'retrograde', False),
                     "abs_pos": round(float(getattr(planet, 'abs_pos', 0)), 2)
                 }
@@ -128,11 +183,47 @@ class NatalCalculator:
                 sign = getattr(house, 'sign', 'Unknown')
                 if hasattr(sign, 'sign'):
                     sign = sign.sign
+                elif hasattr(sign, '__str__'):
+                    sign = str(sign)
+                
+                degree = getattr(house, 'position', 0)
+                if degree == 0 and hasattr(house, 'abs_pos'):
+                    degree = house.abs_pos % 30
                 
                 houses[str(i)] = {
                     "sign": str(sign),
-                    "degree": round(float(getattr(house, 'position', 0)), 2)
+                    "degree": round(float(degree), 2)
                 }
+        
+        # Если дома не найдены, создаем на основе Асцендента
+        if not houses:
+            logger.warning("Дома не найдены, создаем на основе Асцендента")
+            asc_sign = None
+            if hasattr(subject, 'ascendant'):
+                asc = subject.ascendant
+                if hasattr(asc, 'sign'):
+                    asc_sign = asc.sign
+                elif hasattr(asc, 'sign_num'):
+                    asc_sign = asc.sign_num
+                elif hasattr(asc, '__str__'):
+                    asc_sign = str(asc)
+            
+            if asc_sign:
+                sign_order = [
+                    "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+                    "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"
+                ]
+                try:
+                    start_idx = sign_order.index(asc_sign)
+                except (ValueError, AttributeError):
+                    start_idx = 0
+                
+                for i in range(12):
+                    sign_idx = (start_idx + i) % 12
+                    houses[str(i + 1)] = {
+                        "sign": sign_order[sign_idx],
+                        "degree": 0.0
+                    }
         
         return houses
     
@@ -191,26 +282,31 @@ class NatalCalculator:
         }
     
     @classmethod
-    def _calculate_elements(cls, positions: Dict[str, Any]) -> Dict[str, float]:
-        """Рассчитывает распределение стихий."""
-        element_map = {
-            'Aries': 'fire', 'Leo': 'fire', 'Sagittarius': 'fire',
-            'Taurus': 'earth', 'Virgo': 'earth', 'Capricorn': 'earth',
-            'Gemini': 'air', 'Libra': 'air', 'Aquarius': 'air',
-            'Cancer': 'water', 'Scorpio': 'water', 'Pisces': 'water'
-        }
-        
+    def _calculate_elements_from_positions(cls, positions: Dict[str, Any]) -> Dict[str, float]:
+        """
+        Рассчитывает распределение стихий на основе positions.
+        """
         element_counts = {'fire': 0, 'earth': 0, 'air': 0, 'water': 0}
         total = 0
         
         for planet_data in positions.values():
             sign = planet_data.get('sign', '')
-            if sign in element_map:
-                element_counts[element_map[sign]] += 1
+            if sign and sign in cls.ELEMENT_MAP:
+                element = cls.ELEMENT_MAP[sign]
+                element_counts[element] += 1
                 total += 1
+            else:
+                # Пробуем найти знак в маппинге по частичному совпадению
+                for key, value in cls.ELEMENT_MAP.items():
+                    if key.lower() in sign.lower() or sign.lower() in key.lower():
+                        element_counts[value] += 1
+                        total += 1
+                        break
         
         if total == 0:
-            return {'fire': 0, 'earth': 0, 'air': 0, 'water': 0}
+            # Если ничего не найдено, используем равномерное распределение
+            logger.warning("Не найдено планет для расчета элементов. Используем равномерное распределение.")
+            return {'fire': 25.0, 'earth': 25.0, 'air': 25.0, 'water': 25.0}
         
         return {
             'fire': round(element_counts['fire'] / total * 100, 1),
@@ -220,25 +316,31 @@ class NatalCalculator:
         }
     
     @classmethod
-    def _calculate_qualities(cls, positions: Dict[str, Any]) -> Dict[str, float]:
-        """Рассчитывает распределение качеств."""
-        quality_map = {
-            'Aries': 'cardinal', 'Cancer': 'cardinal', 'Libra': 'cardinal', 'Capricorn': 'cardinal',
-            'Taurus': 'fixed', 'Leo': 'fixed', 'Scorpio': 'fixed', 'Aquarius': 'fixed',
-            'Gemini': 'mutable', 'Virgo': 'mutable', 'Sagittarius': 'mutable', 'Pisces': 'mutable'
-        }
-        
+    def _calculate_qualities_from_positions(cls, positions: Dict[str, Any]) -> Dict[str, float]:
+        """
+        Рассчитывает распределение качеств на основе positions.
+        """
         quality_counts = {'cardinal': 0, 'fixed': 0, 'mutable': 0}
         total = 0
         
         for planet_data in positions.values():
             sign = planet_data.get('sign', '')
-            if sign in quality_map:
-                quality_counts[quality_map[sign]] += 1
+            if sign and sign in cls.QUALITY_MAP:
+                quality = cls.QUALITY_MAP[sign]
+                quality_counts[quality] += 1
                 total += 1
+            else:
+                # Пробуем найти знак в маппинге по частичному совпадению
+                for key, value in cls.QUALITY_MAP.items():
+                    if key.lower() in sign.lower() or sign.lower() in key.lower():
+                        quality_counts[value] += 1
+                        total += 1
+                        break
         
         if total == 0:
-            return {'cardinal': 0, 'fixed': 0, 'mutable': 0}
+            # Если ничего не найдено, используем равномерное распределение
+            logger.warning("Не найдено планет для расчета качеств. Используем равномерное распределение.")
+            return {'cardinal': 33.3, 'fixed': 33.3, 'mutable': 33.3}
         
         return {
             'cardinal': round(quality_counts['cardinal'] / total * 100, 1),

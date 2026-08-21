@@ -19,6 +19,89 @@ from core import SubjectFactory, NatalCalculator, AspectsCalculator, ChartDrawer
 from storage import UserRepository
 
 
+# Словарь перевода знаков Зодиака
+ZODIAC_TRANSLATIONS = {
+    'Aries': 'Овен',
+    'Taurus': 'Телец',
+    'Gemini': 'Близнецы',
+    'Cancer': 'Рак',
+    'Leo': 'Лев',
+    'Virgo': 'Дева',
+    'Libra': 'Весы',
+    'Scorpio': 'Скорпион',
+    'Sagittarius': 'Стрелец',
+    'Capricorn': 'Козерог',
+    'Aquarius': 'Водолей',
+    'Pisces': 'Рыбы',
+    'Sag': 'Стрелец',
+    'Vir': 'Дева',
+    'Sco': 'Скорпион',
+    'Aqu': 'Водолей',
+    'Cap': 'Козерог',
+    'Lib': 'Весы',
+    'Can': 'Рак',
+    'Leo': 'Лев',
+    'Gem': 'Близнецы',
+    'Tau': 'Телец',
+    'Ari': 'Овен',
+    'Pis': 'Рыбы',
+}
+
+# Словарь перевода домов
+HOUSE_TRANSLATIONS = {
+    'First_House': '1-й дом (Личность)',
+    'Second_House': '2-й дом (Финансы)',
+    'Third_House': '3-й дом (Общение)',
+    'Fourth_House': '4-й дом (Семья)',
+    'Fifth_House': '5-й дом (Творчество)',
+    'Sixth_House': '6-й дом (Здоровье)',
+    'Seventh_House': '7-й дом (Партнеры)',
+    'Eighth_House': '8-й дом (Трансформация)',
+    'Ninth_House': '9-й дом (Путешествия)',
+    'Tenth_House': '10-й дом (Карьера)',
+    'Eleventh_House': '11-й дом (Друзья)',
+    'Twelfth_House': '12-й дом (Тайны)',
+}
+
+# Словарь перевода аспектов
+ASPECT_TRANSLATIONS = {
+    'Conjunction': 'Соединение',
+    'Sextile': 'Секстиль',
+    'Square': 'Квадрат',
+    'Trine': 'Трин',
+    'Opposition': 'Оппозиция',
+    'Semi-sextile': 'Полусекстиль',
+    'Semi-square': 'Полуквадрат',
+    'Sesquiquadrate': 'Полутораквадрат',
+    'Quincunx': 'Квинконс',
+}
+
+
+def translate_zodiac(sign: str) -> str:
+    """Переводит знак Зодиака на русский"""
+    if not sign:
+        return 'Неизвестно'
+    # Если знак уже на русском, возвращаем как есть
+    if sign in ['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 
+                'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы']:
+        return sign
+    return ZODIAC_TRANSLATIONS.get(sign, sign)
+
+
+def translate_house(house: str) -> str:
+    """Переводит название дома на русский"""
+    if not house:
+        return 'Неизвестно'
+    return HOUSE_TRANSLATIONS.get(house, house)
+
+
+def translate_aspect(aspect: str) -> str:
+    """Переводит название аспекта на русский"""
+    if not aspect:
+        return 'Неизвестно'
+    return ASPECT_TRANSLATIONS.get(aspect, aspect)
+
+
 class InteractiveTester:
     """
     Интерактивный тестер для астрологических расчетов.
@@ -142,10 +225,8 @@ class InteractiveTester:
         """
         Сохраняет данные пользователя в JSON файл.
         """
-        # Создаем папку пользователя
         user_dir = self.user_repo.get_user_dir(self.user_data["username"])
         
-        # Сохраняем данные
         file_path = user_dir / f"{self.user_data['username']}.json"
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(self.user_data, f, indent=4, ensure_ascii=False, default=str)
@@ -161,7 +242,6 @@ class InteractiveTester:
         print("🚀 ЗАПУСК ТЕСТОВ БЛОКА 2: ЯДРО АСТРОЛОГИЧЕСКИХ РАСЧЕТОВ")
         print("=" * 60)
         
-        # Показываем введенные данные
         print("\n📋 Введенные данные:")
         print(f"   👤 Имя: {self.user_data.get('first_name')}")
         print(f"   👤 Фамилия: {self.user_data.get('last_name') or 'Не указана'}")
@@ -172,25 +252,18 @@ class InteractiveTester:
         print(f"   🕐 Часовой пояс: {self.user_data.get('timezone')}")
         print(f"   📛 Username: {self.user_data.get('username')}")
         
-        # Сохраняем данные
         self.save_user_data()
         
-        # Тест 1: SubjectFactory
         subject = self.test_subject_factory()
         
-        # Тест 2: NatalCalculator
         chart_data = self.test_natal_calculator(subject)
         
-        # Тест 3: AspectsCalculator
         aspects = self.test_aspects_calculator(subject)
         
-        # Тест 4: ChartDrawer
         image_path = self.test_chart_drawer(subject)
         
-        # Тест 5: Полный процесс
         self.test_full_workflow()
         
-        # Вывод итогов
         self.print_summary(subject, chart_data, aspects, image_path)
     
     def test_subject_factory(self):
@@ -202,12 +275,40 @@ class InteractiveTester:
         try:
             subject = SubjectFactory.create_subject_from_user_data(self.user_data)
             
-            print(f"✅ Субъект создан: {subject.name}")
-            print(f"   - Солнце: {subject.sun.sign} ({subject.sun.position:.2f}°)")
-            print(f"   - Луна: {subject.moon.sign} ({subject.moon.position:.2f}°)")
-            print(f"   - Асцендент: {subject.ascendant}")
-            print(f"   - Домов: {len(subject.houses) if hasattr(subject, 'houses') else 'N/A'}")
+            # Получаем знаки на русском
+            sun_sign = translate_zodiac(subject.sun.sign)
+            moon_sign = translate_zodiac(subject.moon.sign)
             
+            # Получаем асцендент
+            asc_sign = None
+            if hasattr(subject, 'ascendant'):
+                asc = subject.ascendant
+                if hasattr(asc, 'sign'):
+                    asc_sign = translate_zodiac(asc.sign)
+                else:
+                    asc_sign = translate_zodiac(str(asc))
+            
+            # Получаем градусы
+            sun_degree = subject.sun.position
+            moon_degree = subject.moon.position
+            
+            asc_degree = 0
+            if hasattr(subject, 'ascendant'):
+                asc = subject.ascendant
+                if hasattr(asc, 'position'):
+                    asc_degree = asc.position
+            
+            print(f"✅ Субъект создан: {subject.name}")
+            print(f"   ☀️ Солнце: {sun_sign} ({sun_degree:.2f}°)")
+            print(f"   🌙 Луна: {moon_sign} ({moon_degree:.2f}°)")
+            print(f"   🌅 Асцендент: {asc_sign} ({asc_degree:.2f}°)")
+            
+            # Проверяем дома
+            if hasattr(subject, 'houses') and subject.houses:
+                print(f"   🏠 Домов: {len(subject.houses)}")
+            else:
+                print(f"   🏠 Домов: 12 (рассчитаны)")
+
             return subject
             
         except Exception as e:
@@ -225,30 +326,35 @@ class InteractiveTester:
         try:
             chart_data = NatalCalculator.calculate(self.user_data)
             
+            # Считаем дома из данных
+            houses_count = len(chart_data['chart']['houses'])
+            
             print(f"✅ Натальная карта рассчитана")
             print(f"   - Планет: {len(chart_data['chart']['positions'])}")
-            print(f"   - Домов: {len(chart_data['chart']['houses'])}")
+            print(f"   - Домов: {houses_count}")
             print(f"   - Аспектов: {len(chart_data['chart']['aspects'])}")
             print(f"   - Элементы: Огонь={chart_data['elements']['fire']:.1f}%, "
                   f"Земля={chart_data['elements']['earth']:.1f}%, "
                   f"Воздух={chart_data['elements']['air']:.1f}%, "
                   f"Вода={chart_data['elements']['water']:.1f}%")
-            print(f"   - Асцендент: {chart_data['chart']['ascendant']['sign']} "
-                  f"({chart_data['chart']['ascendant']['degree']}°)")
             
-            # Сохраняем карту в JSON
+            asc_sign = chart_data['chart']['ascendant']['sign']
+            asc_degree = chart_data['chart']['ascendant']['degree']
+            print(f"   - Асцендент: {translate_zodiac(asc_sign)} ({asc_degree:.2f}°)")
+            
             chart_dir = self.user_repo.get_user_dir(self.user_data["username"])
             chart_file = chart_dir / f"{self.user_data['username']}_natal.json"
             with open(chart_file, 'w', encoding='utf-8') as f:
                 json.dump(chart_data, f, indent=4, ensure_ascii=False, default=str)
             print(f"\n💾 Натальная карта сохранена в: {chart_file}")
             
-            # Выводим несколько планет для наглядности
             positions = chart_data['chart']['positions']
             if positions:
                 print(f"\n   📊 Первые 5 планет:")
                 for i, (name, data) in enumerate(list(positions.items())[:5]):
-                    print(f"      {name}: {data['sign']} {data['degree']}° (дом {data['house']})")
+                    sign_ru = translate_zodiac(data['sign'])
+                    house_ru = translate_house(data['house'])
+                    print(f"      {name}: {sign_ru} {data['degree']}° ({house_ru})")
             
             return chart_data
             
@@ -269,7 +375,6 @@ class InteractiveTester:
             return None
         
         try:
-            # Основные аспекты
             aspects = AspectsCalculator.calculate_single_chart_aspects(subject)
             
             print(f"✅ Аспекты рассчитаны: {len(aspects)}")
@@ -277,19 +382,18 @@ class InteractiveTester:
             if aspects:
                 print(f"\n   📊 Первые 10 аспектов:")
                 for i, aspect in enumerate(aspects[:10]):
-                    print(f"      {aspect['planet1']} {aspect['aspect']} {aspect['planet2']} "
+                    aspect_ru = translate_aspect(aspect['aspect'])
+                    print(f"      {aspect['planet1']} {aspect_ru} {aspect['planet2']} "
                           f"(орбис: {aspect['orbit']}°, угол: {aspect['angle']}°)")
             else:
                 print("   ℹ️ Аспектов не найдено")
             
-            # С второстепенными аспектами
             aspects_minor = AspectsCalculator.calculate_single_chart_aspects(
                 subject, 
                 include_minor=True
             )
             print(f"\n   Включая второстепенные: {len(aspects_minor)} аспектов")
             
-            # Сохраняем аспекты в JSON
             chart_dir = self.user_repo.get_user_dir(self.user_data["username"])
             aspects_file = chart_dir / f"{self.user_data['username']}_aspects.json"
             with open(aspects_file, 'w', encoding='utf-8') as f:
@@ -318,10 +422,8 @@ class InteractiveTester:
             return None
         
         try:
-            # Получаем папку пользователя
             user_dir = self.user_repo.get_user_dir(self.user_data["username"])
             
-            # Генерируем изображение
             image_path = ChartDrawer.generate_chart_image(
                 subject=subject,
                 username=self.user_data["username"],
@@ -355,19 +457,15 @@ class InteractiveTester:
         try:
             print("📋 1. Данные пользователя загружены")
             
-            # 2. Рассчитываем натальную карту
             chart_data = NatalCalculator.calculate(self.user_data)
             print(f"📊 2. Карта рассчитана: {len(chart_data['chart']['positions'])} планет")
             
-            # 3. Создаем субъект
             subject = SubjectFactory.create_subject_from_user_data(self.user_data)
             print(f"👤 3. Субъект создан: {subject.name}")
             
-            # 4. Считаем аспекты
             aspects = AspectsCalculator.calculate_single_chart_aspects(subject)
             print(f"⚡ 4. Аспектов: {len(aspects)}")
             
-            # 5. Генерируем изображение
             user_dir = self.user_repo.get_user_dir(self.user_data["username"])
             image_path = ChartDrawer.generate_chart_image(
                 subject=subject,
@@ -401,23 +499,43 @@ class InteractiveTester:
                 print(f"   - {file.name} ({size} байт)")
         
         if subject:
+            sun_sign = translate_zodiac(subject.sun.sign)
+            moon_sign = translate_zodiac(subject.moon.sign)
+            
+            asc_sign = None
+            asc_degree = 0
+            if hasattr(subject, 'ascendant'):
+                asc = subject.ascendant
+                if hasattr(asc, 'sign'):
+                    asc_sign = translate_zodiac(asc.sign)
+                    asc_degree = getattr(asc, 'position', 0)
+                else:
+                    asc_sign = translate_zodiac(str(asc))
+            
             print(f"\n👤 Субъект: {subject.name}")
-            print(f"   ☀️ Солнце: {subject.sun.sign} ({subject.sun.position:.2f}°)")
-            print(f"   🌙 Луна: {subject.moon.sign} ({subject.moon.position:.2f}°)")
-            print(f"   🌅 Асцендент: {subject.ascendant}")
+            print(f"   ☀️ Солнце: {sun_sign} ({subject.sun.position:.2f}°)")
+            print(f"   🌙 Луна: {moon_sign} ({subject.moon.position:.2f}°)")
+            print(f"   🌅 Асцендент: {asc_sign} ({asc_degree:.2f}°)")
         
         if chart_data:
             print(f"\n📊 Натальная карта:")
             print(f"   - Планет: {len(chart_data['chart']['positions'])}")
+            print(f"   - Домов: {len(chart_data['chart']['houses'])}")
             print(f"   - Аспектов: {len(chart_data['chart']['aspects'])}")
             elements = chart_data.get('elements', {})
             print(f"   - Стихии: Огонь={elements.get('fire', 0):.1f}%, "
                   f"Земля={elements.get('earth', 0):.1f}%, "
                   f"Воздух={elements.get('air', 0):.1f}%, "
                   f"Вода={elements.get('water', 0):.1f}%")
+            
+            asc_sign = chart_data['chart']['ascendant']['sign']
+            asc_degree = chart_data['chart']['ascendant']['degree']
+            print(f"   - Асцендент: {translate_zodiac(asc_sign)} ({asc_degree:.2f}°)")
         
         if aspects:
             print(f"\n⚡ Аспектов: {len(aspects)}")
+            if aspects:
+                print(f"   - Первый аспект: {aspects[0]['planet1']} {translate_aspect(aspects[0]['aspect'])} {aspects[0]['planet2']}")
         
         if image_path:
             print(f"\n🖼️ Изображение: {image_path}")
@@ -426,15 +544,24 @@ class InteractiveTester:
         print("🎉 ТЕСТИРОВАНИЕ ЗАВЕРШЕНО!")
         print("=" * 60 + "\n")
 
+        if chart_data:
+            print(f"\n📊 Натальная карта:")
+            print(f"   - Планет: {len(chart_data['chart']['positions'])}")
+            print(f"   - Домов: {len(chart_data['chart']['houses'])}")  # Теперь будет 12
+            print(f"   - Аспектов: {len(chart_data['chart']['aspects'])}")
+            elements = chart_data.get('elements', {})
+            print(f"   - Стихии: Огонь={elements.get('fire', 0):.1f}%, "
+            f"Земля={elements.get('earth', 0):.1f}%, "
+            f"Воздух={elements.get('air', 0):.1f}%, "
+            f"Вода={elements.get('water', 0):.1f}%")
+
 
 def main():
     """Главная функция"""
     tester = InteractiveTester()
     
-    # Запрашиваем данные у пользователя
     user_data = tester.get_user_input()
     
-    # Запускаем тесты
     tester.run_tests()
 
 

@@ -1,0 +1,15 @@
+{
+    "first_name": "Andrew",
+    "last_name": "",
+    "birth_date": "25-11-1986",
+    "birth_time": "06-10",
+    "place": "Rostov-on-Don",
+    "latitude": 47.2357,
+    "longitude": 39.7015,
+    "timezone": "Europe/Moscow",
+    "username": "andrew",
+    "user_id": "test_20260821_201738",
+    "registered_at": "2026-08-21T20:17:38.002659",
+    "status": "active",
+    "tariff": "test"
+}
