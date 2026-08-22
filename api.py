@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 """
 FastAPI сервер для астрологического бота
-Предоставляет REST API для всех астрологических модулей
+Адаптирован для работы на Bothost
 
 Запуск:
-    uvicorn api:app --host 0.0.0.0 --port 8000 --reload
-
-Документация:
-    http://localhost:8000/docs
-    http://localhost:8000/redoc
+    python api.py
+    # или через uvicorn (Bothost использует порт 3000)
+    uvicorn api:app --host 0.0.0.0 --port 3000
 """
 
 import json
 import sys
+import os
+import logging
 from pathlib import Path
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
-import logging
 
 from fastapi import FastAPI, HTTPException, Request, Query
 from fastapi.responses import JSONResponse, PlainTextResponse, FileResponse
@@ -141,24 +140,21 @@ def format_response(data: Any, message: str = "Успешно") -> Dict[str, Any
         "data": data
     }
 
-def error_response(message: str, status_code: int = 400) -> Dict[str, Any]:
-    """Форматирует ответ с ошибкой."""
-    return {
-        "status": "error",
-        "message": message
-    }
-
-# ==================== Эндпоинты ====================
+# ==================== Базовые эндпоинты ====================
 
 @app.get("/")
 async def root():
-    """Корневой эндпоинт."""
+    """Корневой эндпоинт для проверки работы."""
     return {
-        "service": "Астрологический бот API",
+        "status": "ok",
+        "message": "Астрологический бот работает",
         "version": "1.0.0",
+        "timestamp": datetime.now().isoformat(),
         "endpoints": {
             "/docs": "Документация Swagger",
             "/redoc": "Документация ReDoc",
+            "/health": "Проверка состояния",
+            "/webhook": "Webhook для MAX",
             "/users": "Управление пользователями",
             "/natal": "Натальная карта",
             "/transits": "Транзиты",
@@ -171,29 +167,45 @@ async def root():
         }
     }
 
-
 @app.get("/health")
 async def health():
     """Проверка состояния сервера."""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
+@app.post("/webhook")
+async def max_webhook(request: Request):
+    """
+    Обработчик вебхука от MAX.
+    Сюда MAX будет отправлять все сообщения от пользователей.
+    """
+    try:
+        data = await request.json()
+        logger.info(f"📨 Получен webhook от MAX: {data}")
+        
+        # Здесь будет логика обработки сообщений
+        # Пока просто возвращаем OK
+        
+        return {
+            "status": "ok",
+            "message": "Webhook received",
+            "timestamp": datetime.now().isoformat()
+        }
+    except Exception as e:
+        logger.error(f"❌ Ошибка обработки webhook: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"status": "error", "detail": str(e)}
+        )
 
 # ==================== Пользователи ====================
 
 @app.post("/users", response_model=UserResponse)
 async def create_user(user_data: UserData):
-    """
-    Создает нового пользователя.
-    """
+    """Создает нового пользователя."""
     try:
-        # Генерируем username
         username = user_repo.generate_username(user_data.first_name, user_data.last_name)
-        
-        # Формируем данные
         data = user_data.dict()
         data["username"] = username
-        
-        # Сохраняем
         user_repo.save_user_data(username, data)
         
         return UserResponse(
@@ -205,12 +217,9 @@ async def create_user(user_data: UserData):
         logger.error(f"Ошибка создания пользователя: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @app.get("/users/{username}")
 async def get_user(username: str):
-    """
-    Получает данные пользователя.
-    """
+    """Получает данные пользователя."""
     try:
         user_data = load_user(username)
         return format_response(user_data, f"Данные пользователя {username}")
@@ -220,12 +229,9 @@ async def get_user(username: str):
         logger.error(f"Ошибка получения пользователя: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @app.get("/users")
 async def list_users():
-    """
-    Список всех пользователей.
-    """
+    """Список всех пользователей."""
     try:
         user_dir = Path("data/user_data")
         users = []
@@ -251,43 +257,15 @@ async def list_users():
         logger.error(f"Ошибка списка пользователей: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
-@app.delete("/users/{username}")
-async def delete_user(username: str):
-    """
-    Удаляет пользователя.
-    """
-    try:
-        user_dir = user_repo.get_user_dir(username)
-        if not user_dir.exists():
-            raise HTTPException(status_code=404, detail=f"Пользователь {username} не найден")
-        
-        # Удаляем папку со всем содержимым
-        import shutil
-        shutil.rmtree(user_dir)
-        
-        return format_response(None, f"Пользователь {username} удален")
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Ошибка удаления пользователя: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
 # ==================== Натальная карта ====================
 
 @app.post("/natal")
 async def calculate_natal(request: NatalRequest):
-    """
-    Рассчитывает натальную карту.
-    """
+    """Рассчитывает натальную карту."""
     try:
         user_data = load_user(request.username)
-        
-        # Рассчитываем карту
         chart_data = NatalCalculator.calculate(user_data)
         
-        # Сохраняем если нужно
         if request.save:
             user_dir = user_repo.get_user_dir(request.username)
             chart_file = user_dir / f"{request.username}_natal.json"
@@ -301,19 +279,15 @@ async def calculate_natal(request: NatalRequest):
         logger.error(f"Ошибка расчета натальной карты: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 # ==================== Транзиты ====================
 
 @app.post("/transits")
 async def calculate_transits(request: TransitsRequest):
-    """
-    Рассчитывает транзиты.
-    """
+    """Рассчитывает транзиты."""
     try:
         user_data = load_user(request.username)
         
         if request.days > 1:
-            # Период транзитов
             start_date = datetime.now()
             end_date = start_date + timedelta(days=request.days)
             
@@ -327,7 +301,6 @@ async def calculate_transits(request: TransitsRequest):
             
             return format_response(transits, f"Транзиты за {request.days} дней рассчитаны")
         else:
-            # Текущие транзиты
             transits = TransitsCalculator.calculate_current_transits(
                 user_data=user_data,
                 min_significance=request.significance
@@ -340,14 +313,11 @@ async def calculate_transits(request: TransitsRequest):
         logger.error(f"Ошибка расчета транзитов: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 # ==================== Синастрия ====================
 
 @app.post("/synastry")
 async def calculate_synastry(request: SynastryRequest):
-    """
-    Рассчитывает синастрию (совместимость).
-    """
+    """Рассчитывает синастрию."""
     try:
         user1_data = load_user(request.user1)
         user2_data = load_user(request.user2)
@@ -366,17 +336,13 @@ async def calculate_synastry(request: SynastryRequest):
         logger.error(f"Ошибка расчета синастрии: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 # ==================== Солярное возвращение ====================
 
 @app.post("/solar")
 async def calculate_solar(request: SolarRequest):
-    """
-    Рассчитывает солярное возвращение.
-    """
+    """Рассчитывает солярное возвращение."""
     try:
         user_data = load_user(request.username)
-        
         year = request.year or datetime.now().year + 1
         city = request.city or user_data.get('place', 'Current Location')
         
@@ -393,17 +359,13 @@ async def calculate_solar(request: SolarRequest):
         logger.error(f"Ошибка расчета солярного возвращения: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 # ==================== Лунное возвращение ====================
 
 @app.post("/lunar")
 async def calculate_lunar(request: LunarRequest):
-    """
-    Рассчитывает лунное возвращение.
-    """
+    """Рассчитывает лунное возвращение."""
     try:
         user_data = load_user(request.username)
-        
         city = request.city or user_data.get('place', 'Current Location')
         
         lunar = ReturnsCalculator.calculate_next_lunar_return(
@@ -418,14 +380,11 @@ async def calculate_lunar(request: LunarRequest):
         logger.error(f"Ошибка расчета лунного возвращения: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 # ==================== Эфемериды ====================
 
 @app.post("/ephemeris")
 async def generate_ephemeris(request: EphemerisRequest):
-    """
-    Генерирует эфемериды.
-    """
+    """Генерирует эфемериды."""
     try:
         ephemeris = EphemerisGenerator.generate_daily_ephemeris(
             start_date=request.start_date,
@@ -440,21 +399,15 @@ async def generate_ephemeris(request: EphemerisRequest):
         logger.error(f"Ошибка генерации эфемерид: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 # ==================== Изображение карты ====================
 
 @app.post("/chart")
 async def generate_chart(request: ChartRequest):
-    """
-    Генерирует изображение натальной карты.
-    """
+    """Генерирует изображение натальной карты."""
     try:
         user_data = load_user(request.username)
-        
-        # Создаем субъект
         subject = SubjectFactory.create_subject_from_user_data(user_data)
         
-        # Генерируем изображение
         user_dir = user_repo.get_user_dir(request.username)
         image_path = ChartDrawer.generate_chart_image(
             subject=subject,
@@ -477,40 +430,25 @@ async def generate_chart(request: ChartRequest):
         logger.error(f"Ошибка генерации изображения: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
-@app.get("/static/{username}/{filename}")
-async def serve_static(username: str, filename: str):
-    """
-    Возвращает статический файл (изображение).
-    """
-    user_dir = user_repo.get_user_dir(username)
-    file_path = user_dir / filename
-    if not file_path.exists():
-        raise HTTPException(status_code=404, detail="Файл не найден")
-    return FileResponse(file_path)
-
-
 # ==================== Полный отчет ====================
 
 @app.post("/report")
 async def generate_report(request: ReportRequest):
-    """
-    Генерирует полный отчет по пользователю.
-    """
+    """Генерирует полный отчет."""
     try:
         user_data = load_user(request.username)
         
-        # 1. Натальная карта
+        # Натальная карта
         chart_data = NatalCalculator.calculate(user_data)
         
-        # 2. Аспекты
+        # Аспекты
         subject = SubjectFactory.create_subject_from_user_data(user_data)
         aspects = AspectsCalculator.calculate_single_chart_aspects(subject)
         
-        # 3. Текущие транзиты
+        # Транзиты
         transits = TransitsCalculator.calculate_current_transits(user_data)
         
-        # 4. Солярное возвращение
+        # Солярное возвращение
         next_year = datetime.now().year + 1
         solar = ReturnsCalculator.calculate_solar_return(
             user_data=user_data,
@@ -518,7 +456,6 @@ async def generate_report(request: ReportRequest):
             city=user_data.get('place', 'Current Location')
         )
         
-        # Формируем отчет
         report = {
             "user": {
                 "first_name": user_data.get('first_name'),
@@ -564,13 +501,21 @@ async def generate_report(request: ReportRequest):
         logger.error(f"Ошибка генерации отчета: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
-# ==================== Запуск ====================
+# ==================== Запуск для Bothost ====================
 
 if __name__ == "__main__":
+    import os
+    
+    # Bothost использует порт 3000 или переменную PORT
+    port = int(os.environ.get("PORT", 3000))
+    
+    logger.info(f"🚀 Запуск сервера на порту {port}")
+    logger.info(f"📚 Документация: /docs")
+    logger.info(f"🔗 Webhook: /webhook")
+    
     uvicorn.run(
         "api:app",
-        host="0.0.0.0",
-        port=8000,
-        reload=True
+        host="0.0.0.0",  # Обязательно для Bothost
+        port=port,
+        reload=False  # На сервере reload не нужен
     )
