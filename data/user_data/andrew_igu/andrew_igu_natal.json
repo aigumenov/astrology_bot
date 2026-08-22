@@ -1,0 +1,297 @@
+{
+    "chart": {
+        "positions": {
+            "Sun": {
+                "sign": "Sag",
+                "degree": 2.55,
+                "house": "First_House",
+                "retrograde": false,
+                "abs_pos": 242.55
+            },
+            "Moon": {
+                "sign": "Vir",
+                "degree": 7.5,
+                "house": "Tenth_House",
+                "retrograde": false,
+                "abs_pos": 157.5
+            },
+            "Mercury": {
+                "sign": "Sco",
+                "degree": 13.74,
+                "house": "Twelfth_House",
+                "retrograde": false,
+                "abs_pos": 223.74
+            },
+            "Venus": {
+                "sign": "Sco",
+                "degree": 4.91,
+                "house": "Twelfth_House",
+                "retrograde": true,
+                "abs_pos": 214.91
+            },
+            "Mars": {
+                "sign": "Aqu",
+                "degree": 29.34,
+                "house": "Fourth_House",
+                "retrograde": false,
+                "abs_pos": 329.34
+            },
+            "Jupiter": {
+                "sign": "Pis",
+                "degree": 13.44,
+                "house": "Fourth_House",
+                "retrograde": false,
+                "abs_pos": 343.44
+            },
+            "Saturn": {
+                "sign": "Sag",
+                "degree": 11.08,
+                "house": "First_House",
+                "retrograde": false,
+                "abs_pos": 251.08
+            },
+            "Uranus": {
+                "sign": "Sag",
+                "degree": 21.38,
+                "house": "Second_House",
+                "retrograde": false,
+                "abs_pos": 261.38
+            },
+            "Neptune": {
+                "sign": "Cap",
+                "degree": 4.34,
+                "house": "Second_House",
+                "retrograde": false,
+                "abs_pos": 274.34
+            },
+            "Pluto": {
+                "sign": "Sco",
+                "degree": 8.29,
+                "house": "Twelfth_House",
+                "retrograde": false,
+                "abs_pos": 218.29
+            },
+            "Chiron": {
+                "sign": "Gem",
+                "degree": 19.55,
+                "house": "Eighth_House",
+                "retrograde": true,
+                "abs_pos": 79.55
+            },
+            "North Node": {
+                "sign": "Ari",
+                "degree": 19.96,
+                "house": "Fifth_House",
+                "retrograde": false,
+                "abs_pos": 19.96
+            }
+        },
+        "houses": {
+            "1": {
+                "sign": "Aries",
+                "degree": 0.0
+            },
+            "2": {
+                "sign": "Taurus",
+                "degree": 0.0
+            },
+            "3": {
+                "sign": "Gemini",
+                "degree": 0.0
+            },
+            "4": {
+                "sign": "Cancer",
+                "degree": 0.0
+            },
+            "5": {
+                "sign": "Leo",
+                "degree": 0.0
+            },
+            "6": {
+                "sign": "Virgo",
+                "degree": 0.0
+            },
+            "7": {
+                "sign": "Libra",
+                "degree": 0.0
+            },
+            "8": {
+                "sign": "Scorpio",
+                "degree": 0.0
+            },
+            "9": {
+                "sign": "Sagittarius",
+                "degree": 0.0
+            },
+            "10": {
+                "sign": "Capricorn",
+                "degree": 0.0
+            },
+            "11": {
+                "sign": "Aquarius",
+                "degree": 0.0
+            },
+            "12": {
+                "sign": "Pisces",
+                "degree": 0.0
+            }
+        },
+        "aspects": [
+            {
+                "planet1": "Sun",
+                "planet2": "Moon",
+                "aspect": "Square",
+                "orbit": 4.95,
+                "angle": 85.05,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Mars",
+                "aspect": "Square",
+                "orbit": 3.2,
+                "angle": 86.8,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Venus",
+                "aspect": "Sextile",
+                "orbit": 2.58,
+                "angle": 57.42,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Jupiter",
+                "aspect": "Opposition",
+                "orbit": 5.95,
+                "angle": 174.05,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Saturn",
+                "aspect": "Square",
+                "orbit": 3.58,
+                "angle": 93.58,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Neptune",
+                "aspect": "Trine",
+                "orbit": 3.16,
+                "angle": 116.84,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 0.79,
+                "angle": 60.79,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Jupiter",
+                "aspect": "Trine",
+                "orbit": 0.29,
+                "angle": 119.71,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Pluto",
+                "aspect": "Conjunction",
+                "orbit": 5.45,
+                "angle": 5.45,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Mars",
+                "aspect": "Trine",
+                "orbit": 5.57,
+                "angle": 114.43,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Neptune",
+                "aspect": "Sextile",
+                "orbit": 0.57,
+                "angle": 59.43,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Pluto",
+                "aspect": "Conjunction",
+                "orbit": 3.37,
+                "angle": 3.37,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Neptune",
+                "aspect": "Sextile",
+                "orbit": 5.0,
+                "angle": 55.0,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Saturn",
+                "aspect": "Square",
+                "orbit": 2.37,
+                "angle": 92.37,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Uranus",
+                "aspect": "Square",
+                "orbit": 7.94,
+                "angle": 82.06,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Pluto",
+                "aspect": "Trine",
+                "orbit": 5.16,
+                "angle": 125.16,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 3.95,
+                "angle": 56.05,
+                "movement": "Unknown"
+            }
+        ],
+        "ascendant": {
+            "sign": "Sco",
+            "degree": 14.97
+        },
+        "midheaven": {
+            "sign": "Unknown",
+            "degree": 0.0
+        }
+    },
+    "elements": {
+        "fire": 33.3,
+        "earth": 16.7,
+        "air": 16.7,
+        "water": 33.3
+    },
+    "qualities": {
+        "cardinal": 16.7,
+        "fixed": 33.3,
+        "mutable": 50.0
+    }
+}

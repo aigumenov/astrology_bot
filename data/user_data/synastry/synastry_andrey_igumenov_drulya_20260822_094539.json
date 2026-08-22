@@ -1,0 +1,560 @@
+{
+    "user1": {
+        "name": "Andrey",
+        "username": "andrey_igumenov",
+        "birth_date": "25-11-1986",
+        "birth_time": "06-10"
+    },
+    "user2": {
+        "name": "DRULYA",
+        "username": "drulya",
+        "birth_date": "25-11-1986",
+        "birth_time": "06-10"
+    },
+    "aspects": {
+        "total": 44,
+        "filtered": 44,
+        "list": [
+            {
+                "planet1": "Sun",
+                "planet2": "Sun",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Moon",
+                "aspect": "Square",
+                "orbit": 4.95,
+                "angle": 85.05,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Mars",
+                "aspect": "Square",
+                "orbit": 3.2,
+                "angle": 86.8,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Sun",
+                "aspect": "Square",
+                "orbit": 4.95,
+                "angle": 85.05,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Moon",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Venus",
+                "aspect": "Sextile",
+                "orbit": 2.58,
+                "angle": 57.42,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Jupiter",
+                "aspect": "Opposition",
+                "orbit": 5.95,
+                "angle": 174.05,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Saturn",
+                "aspect": "Square",
+                "orbit": 3.58,
+                "angle": 93.58,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Neptune",
+                "aspect": "Trine",
+                "orbit": 3.16,
+                "angle": 116.84,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 0.79,
+                "angle": 60.79,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Mercury",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Jupiter",
+                "aspect": "Trine",
+                "orbit": 0.29,
+                "angle": 119.71,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Pluto",
+                "aspect": "Conjunction",
+                "orbit": 5.45,
+                "angle": 5.45,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Moon",
+                "aspect": "Sextile",
+                "orbit": 2.58,
+                "angle": 57.42,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Venus",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Mars",
+                "aspect": "Trine",
+                "orbit": 5.57,
+                "angle": 114.43,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Neptune",
+                "aspect": "Sextile",
+                "orbit": 0.57,
+                "angle": 59.43,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Pluto",
+                "aspect": "Conjunction",
+                "orbit": 3.37,
+                "angle": 3.37,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Sun",
+                "aspect": "Square",
+                "orbit": 3.2,
+                "angle": 86.8,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Venus",
+                "aspect": "Trine",
+                "orbit": 5.57,
+                "angle": 114.43,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Mars",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Neptune",
+                "aspect": "Sextile",
+                "orbit": 5.0,
+                "angle": 55.0,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Moon",
+                "aspect": "Opposition",
+                "orbit": 5.95,
+                "angle": 174.05,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Mercury",
+                "aspect": "Trine",
+                "orbit": 0.29,
+                "angle": 119.71,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Jupiter",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Saturn",
+                "aspect": "Square",
+                "orbit": 2.37,
+                "angle": 92.37,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Uranus",
+                "aspect": "Square",
+                "orbit": 7.94,
+                "angle": 82.06,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Pluto",
+                "aspect": "Trine",
+                "orbit": 5.16,
+                "angle": 125.16,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Moon",
+                "aspect": "Square",
+                "orbit": 3.58,
+                "angle": 93.58,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Jupiter",
+                "aspect": "Square",
+                "orbit": 2.37,
+                "angle": 92.37,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Saturn",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Jupiter",
+                "aspect": "Square",
+                "orbit": 7.94,
+                "angle": 82.06,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Uranus",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Moon",
+                "aspect": "Trine",
+                "orbit": 3.16,
+                "angle": 116.84,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Venus",
+                "aspect": "Sextile",
+                "orbit": 0.57,
+                "angle": 59.43,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Mars",
+                "aspect": "Sextile",
+                "orbit": 5.0,
+                "angle": 55.0,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Neptune",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 3.95,
+                "angle": 56.05,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Moon",
+                "aspect": "Sextile",
+                "orbit": 0.79,
+                "angle": 60.79,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Mercury",
+                "aspect": "Conjunction",
+                "orbit": 5.45,
+                "angle": 5.45,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Venus",
+                "aspect": "Conjunction",
+                "orbit": 3.37,
+                "angle": 3.37,
+                "movement": "Unknown",
+                "significance": 5
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Jupiter",
+                "aspect": "Trine",
+                "orbit": 5.16,
+                "angle": 125.16,
+                "movement": "Unknown",
+                "significance": 4
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Neptune",
+                "aspect": "Sextile",
+                "orbit": 3.95,
+                "angle": 56.05,
+                "movement": "Unknown",
+                "significance": 3
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Pluto",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown",
+                "significance": 5
+            }
+        ]
+    },
+    "compatibility_score": {
+        "score": 62.8,
+        "level": "good",
+        "description": "Хорошая совместимость. Есть потенциал для развития.",
+        "positive_score": 62.4,
+        "negative_score": 36.0,
+        "neutral_score": 70.1,
+        "total_score": 168.5
+    },
+    "analysis": {
+        "harmonious": [
+            "Moon Sextile Venus (орбис: 2.58°)",
+            "Moon Trine Neptune (орбис: 3.16°)",
+            "Moon Sextile Pluto (орбис: 0.79°)",
+            "Mercury Trine Jupiter (орбис: 0.29°)",
+            "Venus Sextile Moon (орбис: 2.58°)",
+            "Venus Trine Mars (орбис: 5.57°)",
+            "Venus Sextile Neptune (орбис: 0.57°)",
+            "Mars Trine Venus (орбис: 5.57°)",
+            "Mars Sextile Neptune (орбис: 5.0°)",
+            "Jupiter Trine Mercury (орбис: 0.29°)",
+            "Jupiter Trine Pluto (орбис: 5.16°)",
+            "Neptune Trine Moon (орбис: 3.16°)",
+            "Neptune Sextile Venus (орбис: 0.57°)",
+            "Neptune Sextile Mars (орбис: 5.0°)",
+            "Neptune Sextile Pluto (орбис: 3.95°)",
+            "Pluto Sextile Moon (орбис: 0.79°)",
+            "Pluto Trine Jupiter (орбис: 5.16°)",
+            "Pluto Sextile Neptune (орбис: 3.95°)"
+        ],
+        "challenging": [
+            "Sun Square Moon (орбис: 4.95°)",
+            "Sun Square Mars (орбис: 3.2°)",
+            "Moon Square Sun (орбис: 4.95°)",
+            "Moon Opposition Jupiter (орбис: 5.95°)",
+            "Moon Square Saturn (орбис: 3.58°)",
+            "Mars Square Sun (орбис: 3.2°)",
+            "Jupiter Opposition Moon (орбис: 5.95°)",
+            "Jupiter Square Saturn (орбис: 2.37°)",
+            "Jupiter Square Uranus (орбис: 7.94°)",
+            "Saturn Square Moon (орбис: 3.58°)",
+            "Saturn Square Jupiter (орбис: 2.37°)",
+            "Uranus Square Jupiter (орбис: 7.94°)"
+        ],
+        "neutral": [
+            "Sun Conjunction Sun (орбис: 0.0°)",
+            "Moon Conjunction Moon (орбис: 0.0°)",
+            "Mercury Conjunction Mercury (орбис: 0.0°)",
+            "Mercury Conjunction Pluto (орбис: 5.45°)",
+            "Venus Conjunction Venus (орбис: 0.0°)",
+            "Venus Conjunction Pluto (орбис: 3.37°)",
+            "Mars Conjunction Mars (орбис: 0.0°)",
+            "Jupiter Conjunction Jupiter (орбис: 0.0°)",
+            "Saturn Conjunction Saturn (орбис: 0.0°)",
+            "Uranus Conjunction Uranus (орбис: 0.0°)",
+            "Neptune Conjunction Neptune (орбис: 0.0°)",
+            "Pluto Conjunction Mercury (орбис: 5.45°)",
+            "Pluto Conjunction Venus (орбис: 3.37°)",
+            "Pluto Conjunction Pluto (орбис: 0.0°)"
+        ],
+        "by_planet": {
+            "Sun": [
+                "Sun Conjunction (орбис: 0.0°)",
+                "Moon Square (орбис: 4.95°)",
+                "Mars Square (орбис: 3.2°)"
+            ],
+            "Moon": [
+                "Sun Square (орбис: 4.95°)",
+                "Moon Conjunction (орбис: 0.0°)",
+                "Venus Sextile (орбис: 2.58°)",
+                "Jupiter Opposition (орбис: 5.95°)",
+                "Saturn Square (орбис: 3.58°)",
+                "Neptune Trine (орбис: 3.16°)",
+                "Pluto Sextile (орбис: 0.79°)"
+            ],
+            "Mercury": [
+                "Mercury Conjunction (орбис: 0.0°)",
+                "Jupiter Trine (орбис: 0.29°)",
+                "Pluto Conjunction (орбис: 5.45°)"
+            ],
+            "Venus": [
+                "Moon Sextile (орбис: 2.58°)",
+                "Venus Conjunction (орбис: 0.0°)",
+                "Mars Trine (орбис: 5.57°)",
+                "Neptune Sextile (орбис: 0.57°)",
+                "Pluto Conjunction (орбис: 3.37°)"
+            ],
+            "Mars": [
+                "Sun Square (орбис: 3.2°)",
+                "Venus Trine (орбис: 5.57°)",
+                "Mars Conjunction (орбис: 0.0°)",
+                "Neptune Sextile (орбис: 5.0°)"
+            ],
+            "Jupiter": [
+                "Moon Opposition (орбис: 5.95°)",
+                "Mercury Trine (орбис: 0.29°)",
+                "Jupiter Conjunction (орбис: 0.0°)",
+                "Saturn Square (орбис: 2.37°)",
+                "Uranus Square (орбис: 7.94°)",
+                "Pluto Trine (орбис: 5.16°)"
+            ],
+            "Saturn": [
+                "Moon Square (орбис: 3.58°)",
+                "Jupiter Square (орбис: 2.37°)",
+                "Saturn Conjunction (орбис: 0.0°)"
+            ],
+            "Uranus": [
+                "Jupiter Square (орбис: 7.94°)",
+                "Uranus Conjunction (орбис: 0.0°)"
+            ],
+            "Neptune": [
+                "Moon Trine (орбис: 3.16°)",
+                "Venus Sextile (орбис: 0.57°)",
+                "Mars Sextile (орбис: 5.0°)",
+                "Neptune Conjunction (орбис: 0.0°)",
+                "Pluto Sextile (орбис: 3.95°)"
+            ],
+            "Pluto": [
+                "Moon Sextile (орбис: 0.79°)",
+                "Mercury Conjunction (орбис: 5.45°)",
+                "Venus Conjunction (орбис: 3.37°)",
+                "Jupiter Trine (орбис: 5.16°)",
+                "Neptune Sextile (орбис: 3.95°)",
+                "Pluto Conjunction (орбис: 0.0°)"
+            ]
+        },
+        "statistics": {
+            "harmonious_count": 18,
+            "challenging_count": 12,
+            "neutral_count": 14,
+            "total_analyzed": 44
+        }
+    },
+    "strengths": [
+        "Гармоничный Sextile между Moon и Venus (орбис: 2.58°)",
+        "Гармоничный Sextile между Moon и Pluto (орбис: 0.79°)",
+        "Гармоничный Sextile между Venus и Moon (орбис: 2.58°)",
+        "Гармоничный Sextile между Venus и Neptune (орбис: 0.57°)",
+        "Гармоничный Sextile между Neptune и Venus (орбис: 0.57°)"
+    ],
+    "weaknesses": [
+        "В карте нет ярко выраженных слабых аспектов."
+    ],
+    "report": "\n========================================\n📊 ОТЧЕТ О СОВМЕСТИМОСТИ\n========================================\n\n👤 Andrey и DRULYA\n\n📈 ОБЩАЯ ОЦЕНКА\n----------------------------------------\nБалл совместимости: 62.8/100\nУровень: good\nХорошая совместимость. Есть потенциал для развития.\n\n📊 СТАТИСТИКА АСПЕКТОВ\n----------------------------------------\nВсего аспектов: 44\nГармоничных: 18\nНапряженных: 12\nНейтральных: 14\n\n💪 СИЛЬНЫЕ СТОРОНЫ\n----------------------------------------\n1. Гармоничный Sextile между Moon и Venus (орбис: 2.58°)\n2. Гармоничный Sextile между Moon и Pluto (орбис: 0.79°)\n3. Гармоничный Sextile между Venus и Moon (орбис: 2.58°)\n4. Гармоничный Sextile между Venus и Neptune (орбис: 0.57°)\n5. Гармоничный Sextile между Neptune и Venus (орбис: 0.57°)\n\n⚠️ СЛАБЫЕ СТОРОНЫ\n----------------------------------------\n1. В карте нет ярко выраженных слабых аспектов.\n\n✨ ГАРМОНИЧНЫЕ АСПЕКТЫ\n----------------------------------------\n  • Moon Sextile Venus (орбис: 2.58°)\n  • Moon Trine Neptune (орбис: 3.16°)\n  • Moon Sextile Pluto (орбис: 0.79°)\n  • Mercury Trine Jupiter (орбис: 0.29°)\n  • Venus Sextile Moon (орбис: 2.58°)\n\n⚡ НАПРЯЖЕННЫЕ АСПЕКТЫ\n----------------------------------------\n  • Sun Square Moon (орбис: 4.95°)\n  • Sun Square Mars (орбис: 3.2°)\n  • Moon Square Sun (орбис: 4.95°)\n  • Moon Opposition Jupiter (орбис: 5.95°)\n  • Moon Square Saturn (орбис: 3.58°)\n\n========================================\n"
+}

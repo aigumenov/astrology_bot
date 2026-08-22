@@ -1,0 +1,17 @@
+{
+    "first_name": "Алексей",
+    "last_name": "Иванов",
+    "birth_date": "25-11-1986",
+    "birth_time": "06-10",
+    "place": "Ростов-на-Дону",
+    "latitude": 47.2357,
+    "longitude": 39.7015,
+    "timezone": "Europe/Moscow",
+    "username": "алексей_иванов",
+    "_metadata": {
+        "username": "алексей_иванов",
+        "created_at": "2026-08-22T10:34:39.901638",
+        "updated_at": "2026-08-22T10:34:39.901651",
+        "version": "1.0"
+    }
+}

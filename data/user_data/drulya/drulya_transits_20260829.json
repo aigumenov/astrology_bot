@@ -1,0 +1,763 @@
+{
+    "transit_date": "2026-08-29T09:08:52.026831",
+    "location": {
+        "latitude": 47.2357,
+        "longitude": 39.7015,
+        "timezone": "Europe/Moscow"
+    },
+    "natal_subject_name": "DRULYA",
+    "transit_positions": {
+        "Sun": {
+            "sign": "Vir",
+            "degree": 6.06,
+            "abs_pos": 156.06,
+            "retrograde": false
+        },
+        "Moon": {
+            "sign": "Pis",
+            "degree": 20.34,
+            "abs_pos": 350.34,
+            "retrograde": false
+        },
+        "Mercury": {
+            "sign": "Vir",
+            "degree": 7.69,
+            "abs_pos": 157.69,
+            "retrograde": false
+        },
+        "Venus": {
+            "sign": "Lib",
+            "degree": 21.03,
+            "abs_pos": 201.03,
+            "retrograde": false
+        },
+        "Mars": {
+            "sign": "Can",
+            "degree": 11.72,
+            "abs_pos": 101.72,
+            "retrograde": false
+        },
+        "Jupiter": {
+            "sign": "Leo",
+            "degree": 13.15,
+            "abs_pos": 133.15,
+            "retrograde": false
+        },
+        "Saturn": {
+            "sign": "Ari",
+            "degree": 13.82,
+            "abs_pos": 13.82,
+            "retrograde": true
+        },
+        "Uranus": {
+            "sign": "Gem",
+            "degree": 5.63,
+            "abs_pos": 65.63,
+            "retrograde": false
+        },
+        "Neptune": {
+            "sign": "Ari",
+            "degree": 3.73,
+            "abs_pos": 3.73,
+            "retrograde": true
+        },
+        "Pluto": {
+            "sign": "Aqu",
+            "degree": 3.56,
+            "abs_pos": 303.56,
+            "retrograde": true
+        }
+    },
+    "aspects": {
+        "total": 41,
+        "total_all": 41,
+        "list": [
+            {
+                "planet1": "Moon",
+                "planet2": "Mercury",
+                "aspect": "Conjunction",
+                "orbit": 0.19,
+                "angle": 0.19,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Sun",
+                "aspect": "Conjunction",
+                "orbit": 1.44,
+                "angle": 1.44,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Moon",
+                "aspect": "Conjunction",
+                "orbit": 6.9,
+                "angle": 6.9,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Jupiter",
+                "aspect": "Square",
+                "orbit": 0.59,
+                "angle": 90.59,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Neptune",
+                "aspect": "Square",
+                "orbit": 0.61,
+                "angle": 89.39,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Moon",
+                "aspect": "Square",
+                "orbit": 1.04,
+                "angle": 88.96,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Pluto",
+                "aspect": "Square",
+                "orbit": 1.35,
+                "angle": 88.65,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Uranus",
+                "aspect": "Square",
+                "orbit": 1.87,
+                "angle": 91.87,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Uranus",
+                "aspect": "Opposition",
+                "orbit": 3.09,
+                "angle": 176.91,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Mercury",
+                "aspect": "Square",
+                "orbit": 3.39,
+                "angle": 93.39,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Sun",
+                "aspect": "Square",
+                "orbit": 3.51,
+                "angle": 86.49,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Pluto",
+                "aspect": "Square",
+                "orbit": 4.73,
+                "angle": 85.27,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Jupiter",
+                "aspect": "Square",
+                "orbit": 4.86,
+                "angle": 85.14,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Sun",
+                "aspect": "Square",
+                "orbit": 5.02,
+                "angle": 95.02,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Mercury",
+                "aspect": "Square",
+                "orbit": 5.15,
+                "angle": 84.85,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Uranus",
+                "aspect": "Opposition",
+                "orbit": 5.45,
+                "angle": 174.55,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Mercury",
+                "aspect": "Opposition",
+                "orbit": 5.75,
+                "angle": 174.25,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Uranus",
+                "aspect": "Square",
+                "orbit": 6.29,
+                "angle": 96.29,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Sun",
+                "aspect": "Opposition",
+                "orbit": 6.71,
+                "angle": 173.29,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Mars",
+                "aspect": "Opposition",
+                "orbit": 7.38,
+                "angle": 172.62,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Sun",
+                "aspect": "Opposition",
+                "orbit": 7.39,
+                "angle": 172.61,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Uranus",
+                "aspect": "Square",
+                "orbit": 7.81,
+                "angle": 82.19,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Neptune",
+                "aspect": "Trine",
+                "orbit": 1.18,
+                "angle": 121.18,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Jupiter",
+                "planet2": "Mars",
+                "aspect": "Trine",
+                "orbit": 1.72,
+                "angle": 118.28,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Sun",
+                "aspect": "Trine",
+                "orbit": 1.72,
+                "angle": 118.28,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Mars",
+                "aspect": "Trine",
+                "orbit": 2.01,
+                "angle": 122.01,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Jupiter",
+                "aspect": "Trine",
+                "orbit": 2.07,
+                "angle": 117.93,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Saturn",
+                "aspect": "Trine",
+                "orbit": 2.75,
+                "angle": 122.75,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Mercury",
+                "aspect": "Trine",
+                "orbit": 3.35,
+                "angle": 116.65,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Mars",
+                "aspect": "Trine",
+                "orbit": 3.44,
+                "angle": 116.56,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Moon",
+                "aspect": "Trine",
+                "orbit": 6.6,
+                "angle": 126.6,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Mars",
+                "aspect": "Trine",
+                "orbit": 6.81,
+                "angle": 113.19,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Saturn",
+                "planet2": "Neptune",
+                "aspect": "Trine",
+                "orbit": 7.35,
+                "angle": 112.65,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Saturn",
+                "aspect": "Trine",
+                "orbit": 7.56,
+                "angle": 112.44,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Venus",
+                "aspect": "Sextile",
+                "orbit": 0.35,
+                "angle": 60.35,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Mercury",
+                "aspect": "Sextile",
+                "orbit": 0.6,
+                "angle": 60.6,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 1.02,
+                "angle": 61.02,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Sun",
+                "aspect": "Sextile",
+                "orbit": 1.14,
+                "angle": 58.86,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Pluto",
+                "planet2": "Sun",
+                "aspect": "Sextile",
+                "orbit": 2.23,
+                "angle": 62.23,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Mercury",
+                "aspect": "Sextile",
+                "orbit": 2.78,
+                "angle": 57.22,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Mars",
+                "aspect": "Sextile",
+                "orbit": 4.23,
+                "angle": 55.77,
+                "movement": "Unknown"
+            }
+        ],
+        "by_planet": {
+            "Moon": [
+                {
+                    "planet1": "Moon",
+                    "planet2": "Mercury",
+                    "aspect": "Conjunction",
+                    "orbit": 0.19,
+                    "angle": 0.19,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Moon",
+                    "planet2": "Sun",
+                    "aspect": "Conjunction",
+                    "orbit": 1.44,
+                    "angle": 1.44,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Moon",
+                    "planet2": "Uranus",
+                    "aspect": "Square",
+                    "orbit": 1.87,
+                    "angle": 91.87,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Moon",
+                    "planet2": "Mars",
+                    "aspect": "Sextile",
+                    "orbit": 4.23,
+                    "angle": 55.77,
+                    "movement": "Unknown"
+                }
+            ],
+            "Jupiter": [
+                {
+                    "planet1": "Jupiter",
+                    "planet2": "Moon",
+                    "aspect": "Conjunction",
+                    "orbit": 6.9,
+                    "angle": 6.9,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Jupiter",
+                    "planet2": "Mercury",
+                    "aspect": "Opposition",
+                    "orbit": 5.75,
+                    "angle": 174.25,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Jupiter",
+                    "planet2": "Sun",
+                    "aspect": "Opposition",
+                    "orbit": 7.39,
+                    "angle": 172.61,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Jupiter",
+                    "planet2": "Uranus",
+                    "aspect": "Square",
+                    "orbit": 7.81,
+                    "angle": 82.19,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Jupiter",
+                    "planet2": "Mars",
+                    "aspect": "Trine",
+                    "orbit": 1.72,
+                    "angle": 118.28,
+                    "movement": "Unknown"
+                }
+            ],
+            "Mercury": [
+                {
+                    "planet1": "Mercury",
+                    "planet2": "Jupiter",
+                    "aspect": "Square",
+                    "orbit": 0.59,
+                    "angle": 90.59,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Mercury",
+                    "planet2": "Mars",
+                    "aspect": "Trine",
+                    "orbit": 2.01,
+                    "angle": 122.01,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Mercury",
+                    "planet2": "Moon",
+                    "aspect": "Trine",
+                    "orbit": 6.6,
+                    "angle": 126.6,
+                    "movement": "Unknown"
+                }
+            ],
+            "Neptune": [
+                {
+                    "planet1": "Neptune",
+                    "planet2": "Neptune",
+                    "aspect": "Square",
+                    "orbit": 0.61,
+                    "angle": 89.39,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Neptune",
+                    "planet2": "Mars",
+                    "aspect": "Opposition",
+                    "orbit": 7.38,
+                    "angle": 172.62,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Neptune",
+                    "planet2": "Sun",
+                    "aspect": "Trine",
+                    "orbit": 1.72,
+                    "angle": 118.28,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Neptune",
+                    "planet2": "Mercury",
+                    "aspect": "Trine",
+                    "orbit": 3.35,
+                    "angle": 116.65,
+                    "movement": "Unknown"
+                }
+            ],
+            "Uranus": [
+                {
+                    "planet1": "Uranus",
+                    "planet2": "Moon",
+                    "aspect": "Square",
+                    "orbit": 1.04,
+                    "angle": 88.96,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Uranus",
+                    "planet2": "Saturn",
+                    "aspect": "Trine",
+                    "orbit": 7.56,
+                    "angle": 112.44,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Uranus",
+                    "planet2": "Venus",
+                    "aspect": "Sextile",
+                    "orbit": 0.35,
+                    "angle": 60.35,
+                    "movement": "Unknown"
+                }
+            ],
+            "Venus": [
+                {
+                    "planet1": "Venus",
+                    "planet2": "Pluto",
+                    "aspect": "Square",
+                    "orbit": 1.35,
+                    "angle": 88.65,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Venus",
+                    "planet2": "Mars",
+                    "aspect": "Trine",
+                    "orbit": 6.81,
+                    "angle": 113.19,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Venus",
+                    "planet2": "Sun",
+                    "aspect": "Sextile",
+                    "orbit": 1.14,
+                    "angle": 58.86,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Venus",
+                    "planet2": "Mercury",
+                    "aspect": "Sextile",
+                    "orbit": 2.78,
+                    "angle": 57.22,
+                    "movement": "Unknown"
+                }
+            ],
+            "Sun": [
+                {
+                    "planet1": "Sun",
+                    "planet2": "Uranus",
+                    "aspect": "Opposition",
+                    "orbit": 3.09,
+                    "angle": 176.91,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Sun",
+                    "planet2": "Sun",
+                    "aspect": "Square",
+                    "orbit": 3.51,
+                    "angle": 86.49,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Sun",
+                    "planet2": "Mercury",
+                    "aspect": "Square",
+                    "orbit": 5.15,
+                    "angle": 84.85,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Sun",
+                    "planet2": "Neptune",
+                    "aspect": "Trine",
+                    "orbit": 1.18,
+                    "angle": 121.18,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Sun",
+                    "planet2": "Pluto",
+                    "aspect": "Sextile",
+                    "orbit": 1.02,
+                    "angle": 61.02,
+                    "movement": "Unknown"
+                }
+            ],
+            "Saturn": [
+                {
+                    "planet1": "Saturn",
+                    "planet2": "Mercury",
+                    "aspect": "Square",
+                    "orbit": 3.39,
+                    "angle": 93.39,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Saturn",
+                    "planet2": "Sun",
+                    "aspect": "Square",
+                    "orbit": 5.02,
+                    "angle": 95.02,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Saturn",
+                    "planet2": "Uranus",
+                    "aspect": "Opposition",
+                    "orbit": 5.45,
+                    "angle": 174.55,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Saturn",
+                    "planet2": "Jupiter",
+                    "aspect": "Trine",
+                    "orbit": 2.07,
+                    "angle": 117.93,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Saturn",
+                    "planet2": "Saturn",
+                    "aspect": "Trine",
+                    "orbit": 2.75,
+                    "angle": 122.75,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Saturn",
+                    "planet2": "Neptune",
+                    "aspect": "Trine",
+                    "orbit": 7.35,
+                    "angle": 112.65,
+                    "movement": "Unknown"
+                }
+            ],
+            "Pluto": [
+                {
+                    "planet1": "Pluto",
+                    "planet2": "Pluto",
+                    "aspect": "Square",
+                    "orbit": 4.73,
+                    "angle": 85.27,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Pluto",
+                    "planet2": "Jupiter",
+                    "aspect": "Square",
+                    "orbit": 4.86,
+                    "angle": 85.14,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Pluto",
+                    "planet2": "Mars",
+                    "aspect": "Trine",
+                    "orbit": 3.44,
+                    "angle": 116.56,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Pluto",
+                    "planet2": "Mercury",
+                    "aspect": "Sextile",
+                    "orbit": 0.6,
+                    "angle": 60.6,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Pluto",
+                    "planet2": "Sun",
+                    "aspect": "Sextile",
+                    "orbit": 2.23,
+                    "angle": 62.23,
+                    "movement": "Unknown"
+                }
+            ],
+            "Mars": [
+                {
+                    "planet1": "Mars",
+                    "planet2": "Uranus",
+                    "aspect": "Square",
+                    "orbit": 6.29,
+                    "angle": 96.29,
+                    "movement": "Unknown"
+                },
+                {
+                    "planet1": "Mars",
+                    "planet2": "Sun",
+                    "aspect": "Opposition",
+                    "orbit": 6.71,
+                    "angle": 173.29,
+                    "movement": "Unknown"
+                }
+            ]
+        }
+    },
+    "day_score": {
+        "overall": -1.8,
+        "positive": 50,
+        "negative": 76,
+        "neutral": 15,
+        "level": "neutral"
+    },
+    "summary": "Нейтральный день. Нет сильных влияний, можно заниматься текущими делами."
+}

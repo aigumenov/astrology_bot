@@ -1,0 +1,82 @@
+{
+    "date": "2026-09-21T09:37:25.180634",
+    "positions": {
+        "Sun": {
+            "sign": "Vir",
+            "degree": 28.41,
+            "abs_pos": 178.41,
+            "retrograde": false
+        },
+        "Moon": {
+            "sign": "Cap",
+            "degree": 25.86,
+            "abs_pos": 295.86,
+            "retrograde": false
+        },
+        "Mercury": {
+            "sign": "Lib",
+            "degree": 17.05,
+            "abs_pos": 197.05,
+            "retrograde": false
+        },
+        "Venus": {
+            "sign": "Sco",
+            "degree": 5.95,
+            "abs_pos": 215.95,
+            "retrograde": false
+        },
+        "Mars": {
+            "sign": "Can",
+            "degree": 25.99,
+            "abs_pos": 115.99,
+            "retrograde": false
+        },
+        "Jupiter": {
+            "sign": "Leo",
+            "degree": 17.81,
+            "abs_pos": 137.81,
+            "retrograde": false
+        },
+        "Saturn": {
+            "sign": "Ari",
+            "degree": 12.32,
+            "abs_pos": 12.32,
+            "retrograde": true
+        },
+        "Uranus": {
+            "sign": "Gem",
+            "degree": 5.65,
+            "abs_pos": 65.65,
+            "retrograde": true
+        },
+        "Neptune": {
+            "sign": "Ari",
+            "degree": 3.13,
+            "abs_pos": 3.13,
+            "retrograde": true
+        },
+        "Pluto": {
+            "sign": "Aqu",
+            "degree": 3.21,
+            "abs_pos": 303.21,
+            "retrograde": true
+        },
+        "Chiron": {
+            "sign": "Ari",
+            "degree": 29.88,
+            "abs_pos": 29.88,
+            "retrograde": true
+        },
+        "North Node": {
+            "sign": "Aqu",
+            "degree": 29.55,
+            "abs_pos": 329.55,
+            "retrograde": false
+        }
+    },
+    "location": {
+        "latitude": 55.7558,
+        "longitude": 37.6173,
+        "timezone": "Europe/Moscow"
+    }
+}

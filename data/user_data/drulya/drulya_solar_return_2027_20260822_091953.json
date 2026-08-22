@@ -1,0 +1,235 @@
+{
+    "type": "Solar",
+    "type_name": "Солярное возвращение",
+    "return_year": 2027,
+    "return_date": "2027-11-25T04:41:56+03:00",
+    "location": {
+        "latitude": 47.2357,
+        "longitude": 39.7015,
+        "timezone": "Europe/Moscow",
+        "city": "Moscow"
+    },
+    "natal_subject_name": "DRULYA",
+    "return_positions": {
+        "Sun": {
+            "sign": "Sag",
+            "degree": 2.55,
+            "abs_pos": 242.55,
+            "house": "Second_House",
+            "retrograde": false
+        },
+        "Moon": {
+            "sign": "Lib",
+            "degree": 24.62,
+            "abs_pos": 204.62,
+            "house": "Twelfth_House",
+            "retrograde": false
+        },
+        "Mercury": {
+            "sign": "Sco",
+            "degree": 23.11,
+            "abs_pos": 233.11,
+            "house": "First_House",
+            "retrograde": false
+        },
+        "Venus": {
+            "sign": "Sag",
+            "degree": 29.47,
+            "abs_pos": 269.47,
+            "house": "Second_House",
+            "retrograde": false
+        },
+        "Mars": {
+            "sign": "Sag",
+            "degree": 29.47,
+            "abs_pos": 269.47,
+            "house": "Second_House",
+            "retrograde": false
+        },
+        "Jupiter": {
+            "sign": "Vir",
+            "degree": 24.05,
+            "abs_pos": 174.05,
+            "house": "Eleventh_House",
+            "retrograde": false
+        },
+        "Saturn": {
+            "sign": "Ari",
+            "degree": 21.77,
+            "abs_pos": 21.77,
+            "house": "Sixth_House",
+            "retrograde": true
+        },
+        "Uranus": {
+            "sign": "Gem",
+            "degree": 8.15,
+            "abs_pos": 68.15,
+            "house": "Eighth_House",
+            "retrograde": true
+        },
+        "Neptune": {
+            "sign": "Ari",
+            "degree": 3.97,
+            "abs_pos": 3.97,
+            "house": "Fifth_House",
+            "retrograde": true
+        },
+        "Pluto": {
+            "sign": "Aqu",
+            "degree": 5.08,
+            "abs_pos": 305.08,
+            "house": "Third_House",
+            "retrograde": false
+        }
+    },
+    "ascendant": {
+        "sign": "Lib",
+        "degree": 28.81
+    },
+    "midheaven": {
+        "sign": "Unknown",
+        "degree": 0.0
+    },
+    "aspects": {
+        "total": 17,
+        "list": [
+            {
+                "planet1": "Sun",
+                "planet2": "Uranus",
+                "aspect": "Opposition",
+                "orbit": 5.61,
+                "angle": 174.39,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Neptune",
+                "aspect": "Trine",
+                "orbit": 1.42,
+                "angle": 121.42,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Sun",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 2.54,
+                "angle": 62.54,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Venus",
+                "aspect": "Sextile",
+                "orbit": 4.85,
+                "angle": 64.85,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Mars",
+                "aspect": "Sextile",
+                "orbit": 4.85,
+                "angle": 64.85,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Moon",
+                "planet2": "Saturn",
+                "aspect": "Opposition",
+                "orbit": 2.85,
+                "angle": 177.15,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mercury",
+                "planet2": "Jupiter",
+                "aspect": "Sextile",
+                "orbit": 0.94,
+                "angle": 59.06,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Mars",
+                "aspect": "Conjunction",
+                "orbit": 0.0,
+                "angle": 0.0,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Jupiter",
+                "aspect": "Square",
+                "orbit": 5.41,
+                "angle": 95.41,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Saturn",
+                "aspect": "Trine",
+                "orbit": 7.7,
+                "angle": 112.3,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Venus",
+                "planet2": "Neptune",
+                "aspect": "Square",
+                "orbit": 4.5,
+                "angle": 94.5,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Jupiter",
+                "aspect": "Square",
+                "orbit": 5.41,
+                "angle": 95.41,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Saturn",
+                "aspect": "Trine",
+                "orbit": 7.7,
+                "angle": 112.3,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Mars",
+                "planet2": "Neptune",
+                "aspect": "Square",
+                "orbit": 4.5,
+                "angle": 94.5,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Neptune",
+                "aspect": "Sextile",
+                "orbit": 4.19,
+                "angle": 64.19,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Uranus",
+                "planet2": "Pluto",
+                "aspect": "Trine",
+                "orbit": 3.07,
+                "angle": 123.07,
+                "movement": "Unknown"
+            },
+            {
+                "planet1": "Neptune",
+                "planet2": "Pluto",
+                "aspect": "Sextile",
+                "orbit": 1.11,
+                "angle": 58.89,
+                "movement": "Unknown"
+            }
+        ]
+    },
+    "summary": "Благоприятный год. Много гармоничных аспектов, ожидайте хороших событий."
+}

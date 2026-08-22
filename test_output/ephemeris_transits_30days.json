@@ -1,0 +1,4072 @@
+{
+    "period": {
+        "start_date": "2026-08-22T09:37:25.184108",
+        "end_date": "2026-09-21T09:37:25.184108",
+        "step_type": "days",
+        "step": 1,
+        "total_days": 31
+    },
+    "days": [
+        {
+            "date": "2026-08-22T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Leo",
+                    "degree": 29.21,
+                    "abs_pos": 149.21,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Sag",
+                    "degree": 22.89,
+                    "abs_pos": 262.89,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Leo",
+                    "degree": 23.61,
+                    "abs_pos": 143.61,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 14.87,
+                    "abs_pos": 194.87,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 7.16,
+                    "abs_pos": 97.16,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 11.63,
+                    "abs_pos": 131.63,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 14.17,
+                    "abs_pos": 14.17,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.54,
+                    "abs_pos": 65.54,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.89,
+                    "abs_pos": 3.89,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.7,
+                    "abs_pos": 303.7,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.83,
+                    "abs_pos": 329.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.83,
+                    "abs_pos": 149.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 27.38,
+                    "abs_pos": 267.38,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.72,
+                    "abs_pos": 30.72,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 11.62,
+                    "abs_pos": 191.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 16.1,
+                    "abs_pos": 106.1,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 11.62,
+                    "abs_pos": 11.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 16.1,
+                    "abs_pos": 286.1,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-23T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 0.17,
+                    "abs_pos": 150.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Cap",
+                    "degree": 4.77,
+                    "abs_pos": 274.77,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Leo",
+                    "degree": 25.62,
+                    "abs_pos": 145.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 15.77,
+                    "abs_pos": 195.77,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 7.81,
+                    "abs_pos": 97.81,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 11.84,
+                    "abs_pos": 131.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 14.12,
+                    "abs_pos": 14.12,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.55,
+                    "abs_pos": 65.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.87,
+                    "abs_pos": 3.87,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.68,
+                    "abs_pos": 303.68,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.83,
+                    "abs_pos": 329.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.83,
+                    "abs_pos": 149.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 27.49,
+                    "abs_pos": 267.49,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.7,
+                    "abs_pos": 30.7,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 12.27,
+                    "abs_pos": 192.27,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 17.01,
+                    "abs_pos": 107.01,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 12.27,
+                    "abs_pos": 12.27,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 17.01,
+                    "abs_pos": 287.01,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-24T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 1.14,
+                    "abs_pos": 151.14,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Cap",
+                    "degree": 16.71,
+                    "abs_pos": 286.71,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Leo",
+                    "degree": 27.63,
+                    "abs_pos": 147.63,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 16.66,
+                    "abs_pos": 196.66,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 8.45,
+                    "abs_pos": 98.45,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 12.06,
+                    "abs_pos": 132.06,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 14.08,
+                    "abs_pos": 14.08,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.57,
+                    "abs_pos": 65.57,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.85,
+                    "abs_pos": 3.85,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.66,
+                    "abs_pos": 303.66,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.83,
+                    "abs_pos": 329.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.83,
+                    "abs_pos": 149.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 27.6,
+                    "abs_pos": 267.6,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.68,
+                    "abs_pos": 30.68,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 12.92,
+                    "abs_pos": 192.92,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 17.93,
+                    "abs_pos": 107.93,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 12.92,
+                    "abs_pos": 12.92,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 17.93,
+                    "abs_pos": 287.93,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-25T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 2.1,
+                    "abs_pos": 152.1,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Cap",
+                    "degree": 28.78,
+                    "abs_pos": 298.78,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Leo",
+                    "degree": 29.63,
+                    "abs_pos": 149.63,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 17.54,
+                    "abs_pos": 197.54,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 9.1,
+                    "abs_pos": 99.1,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 12.27,
+                    "abs_pos": 132.27,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 14.03,
+                    "abs_pos": 14.03,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.58,
+                    "abs_pos": 65.58,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.82,
+                    "abs_pos": 3.82,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.64,
+                    "abs_pos": 303.64,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.83,
+                    "abs_pos": 329.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.83,
+                    "abs_pos": 149.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 27.72,
+                    "abs_pos": 267.72,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.66,
+                    "abs_pos": 30.66,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 13.58,
+                    "abs_pos": 193.58,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 18.85,
+                    "abs_pos": 108.85,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 13.58,
+                    "abs_pos": 13.58,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 18.85,
+                    "abs_pos": 288.85,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-26T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 3.06,
+                    "abs_pos": 153.06,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Aqu",
+                    "degree": 11.02,
+                    "abs_pos": 311.02,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 1.62,
+                    "abs_pos": 151.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 18.41,
+                    "abs_pos": 198.41,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 9.74,
+                    "abs_pos": 99.74,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 12.49,
+                    "abs_pos": 132.49,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.98,
+                    "abs_pos": 13.98,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.59,
+                    "abs_pos": 65.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.8,
+                    "abs_pos": 3.8,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.62,
+                    "abs_pos": 303.62,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.84,
+                    "abs_pos": 329.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.84,
+                    "abs_pos": 149.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 27.83,
+                    "abs_pos": 267.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.64,
+                    "abs_pos": 30.64,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 14.23,
+                    "abs_pos": 194.23,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 19.78,
+                    "abs_pos": 109.78,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 14.23,
+                    "abs_pos": 14.23,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 19.78,
+                    "abs_pos": 289.78,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-27T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 4.03,
+                    "abs_pos": 154.03,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Aqu",
+                    "degree": 23.46,
+                    "abs_pos": 323.46,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 3.59,
+                    "abs_pos": 153.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 19.27,
+                    "abs_pos": 199.27,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 10.38,
+                    "abs_pos": 100.38,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 12.7,
+                    "abs_pos": 132.7,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.93,
+                    "abs_pos": 13.93,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.61,
+                    "abs_pos": 65.61,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.78,
+                    "abs_pos": 3.78,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.6,
+                    "abs_pos": 303.6,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.84,
+                    "abs_pos": 329.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.84,
+                    "abs_pos": 149.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 27.94,
+                    "abs_pos": 267.94,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.62,
+                    "abs_pos": 30.62,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 14.89,
+                    "abs_pos": 194.89,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 20.7,
+                    "abs_pos": 110.7,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 14.89,
+                    "abs_pos": 14.89,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 20.7,
+                    "abs_pos": 290.7,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-28T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 4.99,
+                    "abs_pos": 154.99,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Pis",
+                    "degree": 6.13,
+                    "abs_pos": 336.13,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 5.55,
+                    "abs_pos": 155.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 20.12,
+                    "abs_pos": 200.12,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 11.02,
+                    "abs_pos": 101.02,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 12.91,
+                    "abs_pos": 132.91,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.88,
+                    "abs_pos": 13.88,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.62,
+                    "abs_pos": 65.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.76,
+                    "abs_pos": 3.76,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.58,
+                    "abs_pos": 303.58,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.84,
+                    "abs_pos": 329.84,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.84,
+                    "abs_pos": 149.84,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.05,
+                    "abs_pos": 268.05,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.6,
+                    "abs_pos": 30.6,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 15.54,
+                    "abs_pos": 195.54,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 21.63,
+                    "abs_pos": 111.63,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 15.54,
+                    "abs_pos": 15.54,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 21.63,
+                    "abs_pos": 291.63,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-29T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 5.96,
+                    "abs_pos": 155.96,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Pis",
+                    "degree": 19.05,
+                    "abs_pos": 349.05,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 7.5,
+                    "abs_pos": 157.5,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 20.95,
+                    "abs_pos": 200.95,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 11.66,
+                    "abs_pos": 101.66,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 13.13,
+                    "abs_pos": 133.13,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.83,
+                    "abs_pos": 13.83,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.63,
+                    "abs_pos": 65.63,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.73,
+                    "abs_pos": 3.73,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.56,
+                    "abs_pos": 303.56,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.84,
+                    "abs_pos": 329.84,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.84,
+                    "abs_pos": 149.84,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.16,
+                    "abs_pos": 268.16,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.58,
+                    "abs_pos": 30.58,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 16.19,
+                    "abs_pos": 196.19,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 22.56,
+                    "abs_pos": 112.56,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 16.19,
+                    "abs_pos": 16.19,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 22.56,
+                    "abs_pos": 292.56,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-30T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 6.93,
+                    "abs_pos": 156.93,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Ari",
+                    "degree": 2.2,
+                    "abs_pos": 2.2,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 9.42,
+                    "abs_pos": 159.42,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 21.78,
+                    "abs_pos": 201.78,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 12.3,
+                    "abs_pos": 102.3,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 13.34,
+                    "abs_pos": 133.34,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.78,
+                    "abs_pos": 13.78,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.64,
+                    "abs_pos": 65.64,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.71,
+                    "abs_pos": 3.71,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.54,
+                    "abs_pos": 303.54,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.83,
+                    "abs_pos": 329.83,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.83,
+                    "abs_pos": 149.83,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.28,
+                    "abs_pos": 268.28,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.56,
+                    "abs_pos": 30.56,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 16.85,
+                    "abs_pos": 196.85,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 23.49,
+                    "abs_pos": 113.49,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 16.85,
+                    "abs_pos": 16.85,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 23.49,
+                    "abs_pos": 293.49,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-31T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 7.89,
+                    "abs_pos": 157.89,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Ari",
+                    "degree": 15.59,
+                    "abs_pos": 15.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 11.33,
+                    "abs_pos": 161.33,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 22.59,
+                    "abs_pos": 202.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 12.93,
+                    "abs_pos": 102.93,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 13.55,
+                    "abs_pos": 133.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.72,
+                    "abs_pos": 13.72,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.65,
+                    "abs_pos": 65.65,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.68,
+                    "abs_pos": 3.68,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.53,
+                    "abs_pos": 303.53,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.81,
+                    "abs_pos": 329.81,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.81,
+                    "abs_pos": 149.81,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.39,
+                    "abs_pos": 268.39,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.54,
+                    "abs_pos": 30.54,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 17.5,
+                    "abs_pos": 197.5,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 24.42,
+                    "abs_pos": 114.42,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 17.5,
+                    "abs_pos": 17.5,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 24.42,
+                    "abs_pos": 294.42,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-01T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 8.86,
+                    "abs_pos": 158.86,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Ari",
+                    "degree": 29.2,
+                    "abs_pos": 29.2,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 13.22,
+                    "abs_pos": 163.22,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 23.39,
+                    "abs_pos": 203.39,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 13.57,
+                    "abs_pos": 103.57,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 13.76,
+                    "abs_pos": 133.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.67,
+                    "abs_pos": 13.67,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.66,
+                    "abs_pos": 65.66,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.66,
+                    "abs_pos": 3.66,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.51,
+                    "abs_pos": 303.51,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.79,
+                    "abs_pos": 329.79,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.79,
+                    "abs_pos": 149.79,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.5,
+                    "abs_pos": 268.5,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.51,
+                    "abs_pos": 30.51,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 18.15,
+                    "abs_pos": 198.15,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 25.35,
+                    "abs_pos": 115.35,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 18.15,
+                    "abs_pos": 18.15,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 25.35,
+                    "abs_pos": 295.35,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-02T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 9.83,
+                    "abs_pos": 159.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Tau",
+                    "degree": 13.0,
+                    "abs_pos": 43.0,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 15.09,
+                    "abs_pos": 165.09,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 24.18,
+                    "abs_pos": 204.18,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 14.2,
+                    "abs_pos": 104.2,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 13.97,
+                    "abs_pos": 133.97,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.61,
+                    "abs_pos": 13.61,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.67,
+                    "abs_pos": 65.67,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.63,
+                    "abs_pos": 3.63,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.49,
+                    "abs_pos": 303.49,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.78,
+                    "abs_pos": 329.78,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.78,
+                    "abs_pos": 149.78,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.61,
+                    "abs_pos": 268.61,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.49,
+                    "abs_pos": 30.49,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 18.81,
+                    "abs_pos": 198.81,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 26.29,
+                    "abs_pos": 116.29,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 18.81,
+                    "abs_pos": 18.81,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 26.29,
+                    "abs_pos": 296.29,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-03T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 10.8,
+                    "abs_pos": 160.8,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Tau",
+                    "degree": 26.97,
+                    "abs_pos": 56.97,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 16.94,
+                    "abs_pos": 166.94,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 24.95,
+                    "abs_pos": 204.95,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 14.83,
+                    "abs_pos": 104.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 14.18,
+                    "abs_pos": 134.18,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.55,
+                    "abs_pos": 13.55,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.67,
+                    "abs_pos": 65.67,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.61,
+                    "abs_pos": 3.61,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.47,
+                    "abs_pos": 303.47,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.77,
+                    "abs_pos": 329.77,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.77,
+                    "abs_pos": 149.77,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.72,
+                    "abs_pos": 268.72,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.46,
+                    "abs_pos": 30.46,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 19.46,
+                    "abs_pos": 199.46,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 27.23,
+                    "abs_pos": 117.23,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 19.46,
+                    "abs_pos": 19.46,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 27.23,
+                    "abs_pos": 297.23,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-04T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 11.76,
+                    "abs_pos": 161.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Gem",
+                    "degree": 11.08,
+                    "abs_pos": 71.08,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 18.76,
+                    "abs_pos": 168.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 25.71,
+                    "abs_pos": 205.71,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 15.46,
+                    "abs_pos": 105.46,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 14.38,
+                    "abs_pos": 134.38,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.49,
+                    "abs_pos": 13.49,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.68,
+                    "abs_pos": 65.68,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.58,
+                    "abs_pos": 3.58,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.45,
+                    "abs_pos": 303.45,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.76,
+                    "abs_pos": 329.76,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.76,
+                    "abs_pos": 149.76,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.83,
+                    "abs_pos": 268.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.44,
+                    "abs_pos": 30.44,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 20.11,
+                    "abs_pos": 200.11,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 28.17,
+                    "abs_pos": 118.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 20.11,
+                    "abs_pos": 20.11,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 28.17,
+                    "abs_pos": 298.17,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-05T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 12.73,
+                    "abs_pos": 162.73,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Gem",
+                    "degree": 25.31,
+                    "abs_pos": 85.31,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 20.57,
+                    "abs_pos": 170.57,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 26.46,
+                    "abs_pos": 206.46,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 16.09,
+                    "abs_pos": 106.09,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 14.59,
+                    "abs_pos": 134.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.43,
+                    "abs_pos": 13.43,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.68,
+                    "abs_pos": 65.68,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.56,
+                    "abs_pos": 3.56,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.44,
+                    "abs_pos": 303.44,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.76,
+                    "abs_pos": 329.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.76,
+                    "abs_pos": 149.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 28.95,
+                    "abs_pos": 268.95,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.41,
+                    "abs_pos": 30.41,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 20.76,
+                    "abs_pos": 200.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Can",
+                    "degree": 29.11,
+                    "abs_pos": 119.11,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 20.76,
+                    "abs_pos": 20.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Cap",
+                    "degree": 29.11,
+                    "abs_pos": 299.11,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-06T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 13.7,
+                    "abs_pos": 163.7,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Can",
+                    "degree": 9.6,
+                    "abs_pos": 99.6,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 22.36,
+                    "abs_pos": 172.36,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 27.19,
+                    "abs_pos": 207.19,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 16.72,
+                    "abs_pos": 106.72,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 14.8,
+                    "abs_pos": 134.8,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.37,
+                    "abs_pos": 13.37,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.69,
+                    "abs_pos": 65.69,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.53,
+                    "abs_pos": 3.53,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.42,
+                    "abs_pos": 303.42,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.78,
+                    "abs_pos": 329.78,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.78,
+                    "abs_pos": 149.78,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.06,
+                    "abs_pos": 269.06,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.38,
+                    "abs_pos": 30.38,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 21.41,
+                    "abs_pos": 201.41,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 0.06,
+                    "abs_pos": 120.06,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 21.41,
+                    "abs_pos": 21.41,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 0.06,
+                    "abs_pos": 300.06,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-07T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 14.67,
+                    "abs_pos": 164.67,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Can",
+                    "degree": 23.92,
+                    "abs_pos": 113.92,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 24.13,
+                    "abs_pos": 174.13,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 27.91,
+                    "abs_pos": 207.91,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 17.35,
+                    "abs_pos": 107.35,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 15.0,
+                    "abs_pos": 135.0,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.3,
+                    "abs_pos": 13.3,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.69,
+                    "abs_pos": 65.69,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.51,
+                    "abs_pos": 3.51,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.4,
+                    "abs_pos": 303.4,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.8,
+                    "abs_pos": 329.8,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.8,
+                    "abs_pos": 149.8,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.17,
+                    "abs_pos": 269.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.35,
+                    "abs_pos": 30.35,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 22.07,
+                    "abs_pos": 202.07,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 1.01,
+                    "abs_pos": 121.01,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 22.07,
+                    "abs_pos": 22.07,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 1.01,
+                    "abs_pos": 301.01,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-08T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 15.64,
+                    "abs_pos": 165.64,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Leo",
+                    "degree": 8.2,
+                    "abs_pos": 128.2,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 25.88,
+                    "abs_pos": 175.88,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 28.61,
+                    "abs_pos": 208.61,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 17.97,
+                    "abs_pos": 107.97,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 15.21,
+                    "abs_pos": 135.21,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.24,
+                    "abs_pos": 13.24,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.69,
+                    "abs_pos": 65.69,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.48,
+                    "abs_pos": 3.48,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.39,
+                    "abs_pos": 303.39,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.81,
+                    "abs_pos": 329.81,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.81,
+                    "abs_pos": 149.81,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.28,
+                    "abs_pos": 269.28,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.32,
+                    "abs_pos": 30.32,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 22.72,
+                    "abs_pos": 202.72,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 1.96,
+                    "abs_pos": 121.96,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 22.72,
+                    "abs_pos": 22.72,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 1.96,
+                    "abs_pos": 301.96,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-09T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 16.62,
+                    "abs_pos": 166.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Leo",
+                    "degree": 22.39,
+                    "abs_pos": 142.39,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 27.6,
+                    "abs_pos": 177.6,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 29.29,
+                    "abs_pos": 209.29,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 18.59,
+                    "abs_pos": 108.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 15.41,
+                    "abs_pos": 135.41,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.18,
+                    "abs_pos": 13.18,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.7,
+                    "abs_pos": 65.7,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.46,
+                    "abs_pos": 3.46,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.37,
+                    "abs_pos": 303.37,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.82,
+                    "abs_pos": 329.82,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.82,
+                    "abs_pos": 149.82,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.39,
+                    "abs_pos": 269.39,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.29,
+                    "abs_pos": 30.29,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 23.37,
+                    "abs_pos": 203.37,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 2.91,
+                    "abs_pos": 122.91,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 23.37,
+                    "abs_pos": 23.37,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 2.91,
+                    "abs_pos": 302.91,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-10T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 17.59,
+                    "abs_pos": 167.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Vir",
+                    "degree": 6.43,
+                    "abs_pos": 156.43,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Vir",
+                    "degree": 29.31,
+                    "abs_pos": 179.31,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Lib",
+                    "degree": 29.96,
+                    "abs_pos": 209.96,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 19.21,
+                    "abs_pos": 109.21,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 15.62,
+                    "abs_pos": 135.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.11,
+                    "abs_pos": 13.11,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.7,
+                    "abs_pos": 65.7,
+                    "retrograde": false
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.43,
+                    "abs_pos": 3.43,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.36,
+                    "abs_pos": 303.36,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.82,
+                    "abs_pos": 329.82,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.82,
+                    "abs_pos": 149.82,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.5,
+                    "abs_pos": 269.5,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.26,
+                    "abs_pos": 30.26,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 24.02,
+                    "abs_pos": 204.02,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 3.87,
+                    "abs_pos": 123.87,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 24.02,
+                    "abs_pos": 24.02,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 3.87,
+                    "abs_pos": 303.87,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-11T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 18.56,
+                    "abs_pos": 168.56,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Vir",
+                    "degree": 20.24,
+                    "abs_pos": 170.24,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 1.0,
+                    "abs_pos": 181.0,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 0.61,
+                    "abs_pos": 210.61,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 19.83,
+                    "abs_pos": 109.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 15.82,
+                    "abs_pos": 135.82,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 13.04,
+                    "abs_pos": 13.04,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.7,
+                    "abs_pos": 65.7,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.4,
+                    "abs_pos": 3.4,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.34,
+                    "abs_pos": 303.34,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.81,
+                    "abs_pos": 329.81,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.81,
+                    "abs_pos": 149.81,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.62,
+                    "abs_pos": 269.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.23,
+                    "abs_pos": 30.23,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 24.67,
+                    "abs_pos": 204.67,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 4.83,
+                    "abs_pos": 124.83,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 24.67,
+                    "abs_pos": 24.67,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 4.83,
+                    "abs_pos": 304.83,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-12T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 19.53,
+                    "abs_pos": 169.53,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Lib",
+                    "degree": 3.78,
+                    "abs_pos": 183.78,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 2.67,
+                    "abs_pos": 182.67,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 1.24,
+                    "abs_pos": 211.24,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 20.45,
+                    "abs_pos": 110.45,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 16.02,
+                    "abs_pos": 136.02,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.97,
+                    "abs_pos": 12.97,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.7,
+                    "abs_pos": 65.7,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.38,
+                    "abs_pos": 3.38,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.33,
+                    "abs_pos": 303.33,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.77,
+                    "abs_pos": 329.77,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.77,
+                    "abs_pos": 149.77,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.73,
+                    "abs_pos": 269.73,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.2,
+                    "abs_pos": 30.2,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 25.32,
+                    "abs_pos": 205.32,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 5.79,
+                    "abs_pos": 125.79,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 25.32,
+                    "abs_pos": 25.32,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 5.79,
+                    "abs_pos": 305.79,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-13T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 20.51,
+                    "abs_pos": 170.51,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Lib",
+                    "degree": 17.02,
+                    "abs_pos": 197.02,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 4.33,
+                    "abs_pos": 184.33,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 1.85,
+                    "abs_pos": 211.85,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 21.07,
+                    "abs_pos": 111.07,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 16.22,
+                    "abs_pos": 136.22,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.91,
+                    "abs_pos": 12.91,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.69,
+                    "abs_pos": 65.69,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.35,
+                    "abs_pos": 3.35,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.31,
+                    "abs_pos": 303.31,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.72,
+                    "abs_pos": 329.72,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.72,
+                    "abs_pos": 149.72,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.84,
+                    "abs_pos": 269.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.17,
+                    "abs_pos": 30.17,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 25.97,
+                    "abs_pos": 205.97,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 6.75,
+                    "abs_pos": 126.75,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 25.97,
+                    "abs_pos": 25.97,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 6.75,
+                    "abs_pos": 306.75,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-14T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 21.48,
+                    "abs_pos": 171.48,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Lib",
+                    "degree": 29.94,
+                    "abs_pos": 209.94,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 5.96,
+                    "abs_pos": 185.96,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 2.44,
+                    "abs_pos": 212.44,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 21.68,
+                    "abs_pos": 111.68,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 16.42,
+                    "abs_pos": 136.42,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.84,
+                    "abs_pos": 12.84,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.69,
+                    "abs_pos": 65.69,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.32,
+                    "abs_pos": 3.32,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.3,
+                    "abs_pos": 303.3,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.67,
+                    "abs_pos": 329.67,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.67,
+                    "abs_pos": 149.67,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Sag",
+                    "degree": 29.95,
+                    "abs_pos": 269.95,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.13,
+                    "abs_pos": 30.13,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 26.62,
+                    "abs_pos": 206.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 7.72,
+                    "abs_pos": 127.72,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 26.62,
+                    "abs_pos": 26.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 7.72,
+                    "abs_pos": 307.72,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-15T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 22.45,
+                    "abs_pos": 172.45,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Sco",
+                    "degree": 12.55,
+                    "abs_pos": 222.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 7.58,
+                    "abs_pos": 187.58,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 3.0,
+                    "abs_pos": 213.0,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 22.29,
+                    "abs_pos": 112.29,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 16.62,
+                    "abs_pos": 136.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.76,
+                    "abs_pos": 12.76,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.69,
+                    "abs_pos": 65.69,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.3,
+                    "abs_pos": 3.3,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.28,
+                    "abs_pos": 303.28,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.62,
+                    "abs_pos": 329.62,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.62,
+                    "abs_pos": 149.62,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.06,
+                    "abs_pos": 270.06,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.1,
+                    "abs_pos": 30.1,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 27.27,
+                    "abs_pos": 207.27,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 8.69,
+                    "abs_pos": 128.69,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 27.27,
+                    "abs_pos": 27.27,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 8.69,
+                    "abs_pos": 308.69,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-16T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 23.43,
+                    "abs_pos": 173.43,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Sco",
+                    "degree": 24.89,
+                    "abs_pos": 234.89,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 9.17,
+                    "abs_pos": 189.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 3.55,
+                    "abs_pos": 213.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 22.9,
+                    "abs_pos": 112.9,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 16.82,
+                    "abs_pos": 136.82,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.69,
+                    "abs_pos": 12.69,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.68,
+                    "abs_pos": 65.68,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.27,
+                    "abs_pos": 3.27,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.27,
+                    "abs_pos": 303.27,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.57,
+                    "abs_pos": 329.57,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.57,
+                    "abs_pos": 149.57,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.17,
+                    "abs_pos": 270.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.06,
+                    "abs_pos": 30.06,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 27.92,
+                    "abs_pos": 207.92,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 9.66,
+                    "abs_pos": 129.66,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 27.92,
+                    "abs_pos": 27.92,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 9.66,
+                    "abs_pos": 309.66,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-17T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 24.4,
+                    "abs_pos": 174.4,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Sag",
+                    "degree": 7.01,
+                    "abs_pos": 247.01,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 10.76,
+                    "abs_pos": 190.76,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 4.07,
+                    "abs_pos": 214.07,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 23.51,
+                    "abs_pos": 113.51,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 17.01,
+                    "abs_pos": 137.01,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.62,
+                    "abs_pos": 12.62,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.68,
+                    "abs_pos": 65.68,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.24,
+                    "abs_pos": 3.24,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.26,
+                    "abs_pos": 303.26,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.53,
+                    "abs_pos": 329.53,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.53,
+                    "abs_pos": 149.53,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.29,
+                    "abs_pos": 270.29,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Tau",
+                    "degree": 0.03,
+                    "abs_pos": 30.03,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 28.57,
+                    "abs_pos": 208.57,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 10.63,
+                    "abs_pos": 130.63,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 28.57,
+                    "abs_pos": 28.57,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 10.63,
+                    "abs_pos": 310.63,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-18T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 25.38,
+                    "abs_pos": 175.38,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Sag",
+                    "degree": 18.97,
+                    "abs_pos": 258.97,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 12.32,
+                    "abs_pos": 192.32,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 4.57,
+                    "abs_pos": 214.57,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 24.12,
+                    "abs_pos": 114.12,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 17.21,
+                    "abs_pos": 137.21,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.55,
+                    "abs_pos": 12.55,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.67,
+                    "abs_pos": 65.67,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.21,
+                    "abs_pos": 3.21,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.25,
+                    "abs_pos": 303.25,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.51,
+                    "abs_pos": 329.51,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.51,
+                    "abs_pos": 149.51,
+                    "retrograde": true
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.4,
+                    "abs_pos": 270.4,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Ari",
+                    "degree": 29.99,
+                    "abs_pos": 29.99,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 29.22,
+                    "abs_pos": 209.22,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 11.61,
+                    "abs_pos": 131.61,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 29.22,
+                    "abs_pos": 29.22,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 11.61,
+                    "abs_pos": 311.61,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-19T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 26.36,
+                    "abs_pos": 176.36,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Cap",
+                    "degree": 0.84,
+                    "abs_pos": 270.84,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 13.86,
+                    "abs_pos": 193.86,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 5.04,
+                    "abs_pos": 215.04,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 24.73,
+                    "abs_pos": 114.73,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 17.4,
+                    "abs_pos": 137.4,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.48,
+                    "abs_pos": 12.48,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.67,
+                    "abs_pos": 65.67,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.19,
+                    "abs_pos": 3.19,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.23,
+                    "abs_pos": 303.23,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.51,
+                    "abs_pos": 329.51,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.51,
+                    "abs_pos": 149.51,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.51,
+                    "abs_pos": 270.51,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Ari",
+                    "degree": 29.96,
+                    "abs_pos": 29.96,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Lib",
+                    "degree": 29.87,
+                    "abs_pos": 209.87,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 12.59,
+                    "abs_pos": 132.59,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Ari",
+                    "degree": 29.87,
+                    "abs_pos": 29.87,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 12.59,
+                    "abs_pos": 312.59,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-20T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 27.33,
+                    "abs_pos": 177.33,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Cap",
+                    "degree": 12.71,
+                    "abs_pos": 282.71,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 15.39,
+                    "abs_pos": 195.39,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 5.49,
+                    "abs_pos": 215.49,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 25.33,
+                    "abs_pos": 115.33,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 17.6,
+                    "abs_pos": 137.6,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.4,
+                    "abs_pos": 12.4,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.66,
+                    "abs_pos": 65.66,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.16,
+                    "abs_pos": 3.16,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.22,
+                    "abs_pos": 303.22,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.53,
+                    "abs_pos": 329.53,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.53,
+                    "abs_pos": 149.53,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.62,
+                    "abs_pos": 270.62,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Ari",
+                    "degree": 29.92,
+                    "abs_pos": 29.92,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Sco",
+                    "degree": 0.52,
+                    "abs_pos": 210.52,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 13.58,
+                    "abs_pos": 133.58,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Tau",
+                    "degree": 0.52,
+                    "abs_pos": 30.52,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 13.58,
+                    "abs_pos": 313.58,
+                    "retrograde": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-21T09:37:25.184108",
+            "planets": [
+                {
+                    "name": "Sun",
+                    "sign": "Vir",
+                    "degree": 28.31,
+                    "abs_pos": 178.31,
+                    "retrograde": false
+                },
+                {
+                    "name": "Moon",
+                    "sign": "Cap",
+                    "degree": 24.66,
+                    "abs_pos": 294.66,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mercury",
+                    "sign": "Lib",
+                    "degree": 16.9,
+                    "abs_pos": 196.9,
+                    "retrograde": false
+                },
+                {
+                    "name": "Venus",
+                    "sign": "Sco",
+                    "degree": 5.91,
+                    "abs_pos": 215.91,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mars",
+                    "sign": "Can",
+                    "degree": 25.93,
+                    "abs_pos": 115.93,
+                    "retrograde": false
+                },
+                {
+                    "name": "Jupiter",
+                    "sign": "Leo",
+                    "degree": 17.79,
+                    "abs_pos": 137.79,
+                    "retrograde": false
+                },
+                {
+                    "name": "Saturn",
+                    "sign": "Ari",
+                    "degree": 12.33,
+                    "abs_pos": 12.33,
+                    "retrograde": true
+                },
+                {
+                    "name": "Uranus",
+                    "sign": "Gem",
+                    "degree": 5.65,
+                    "abs_pos": 65.65,
+                    "retrograde": true
+                },
+                {
+                    "name": "Neptune",
+                    "sign": "Ari",
+                    "degree": 3.13,
+                    "abs_pos": 3.13,
+                    "retrograde": true
+                },
+                {
+                    "name": "Pluto",
+                    "sign": "Aqu",
+                    "degree": 3.21,
+                    "abs_pos": 303.21,
+                    "retrograde": true
+                },
+                {
+                    "name": "True_North_Lunar_Node",
+                    "sign": "Aqu",
+                    "degree": 29.55,
+                    "abs_pos": 329.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "True_South_Lunar_Node",
+                    "sign": "Leo",
+                    "degree": 29.55,
+                    "abs_pos": 149.55,
+                    "retrograde": false
+                },
+                {
+                    "name": "Mean_Lilith",
+                    "sign": "Cap",
+                    "degree": 0.73,
+                    "abs_pos": 270.73,
+                    "retrograde": false
+                },
+                {
+                    "name": "Chiron",
+                    "sign": "Ari",
+                    "degree": 29.88,
+                    "abs_pos": 29.88,
+                    "retrograde": true
+                },
+                {
+                    "name": "Ascendant",
+                    "sign": "Sco",
+                    "degree": 1.17,
+                    "abs_pos": 211.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Medium_Coeli",
+                    "sign": "Leo",
+                    "degree": 14.56,
+                    "abs_pos": 134.56,
+                    "retrograde": false
+                },
+                {
+                    "name": "Descendant",
+                    "sign": "Tau",
+                    "degree": 1.17,
+                    "abs_pos": 31.17,
+                    "retrograde": false
+                },
+                {
+                    "name": "Imum_Coeli",
+                    "sign": "Aqu",
+                    "degree": 14.56,
+                    "abs_pos": 314.56,
+                    "retrograde": false
+                }
+            ]
+        }
+    ]
+}
