@@ -145,15 +145,14 @@ def format_response(data: Any, message: str = "Успешно") -> Dict[str, Any
 
 async def send_message(chat_id: str, text: str):
     """Отправляет сообщение через MAX API."""
-    url = f"{MAX_API_URL}/sendMessage"
+    url = f"{MAX_API_URL}/messages"
     headers = {"Authorization": MAX_BOT_TOKEN}
     payload = {
-        "chat_id": chat_id,
+        "user_id": chat_id,  # Вместо chat_id используем user_id
         "text": text
     }
     
     try:
-        # verify=False для обхода SSL ошибки (временно)
         async with httpx.AsyncClient(verify=False) as client:
             response = await client.post(url, json=payload, headers=headers)
             if response.status_code == 200:
