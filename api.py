@@ -146,9 +146,12 @@ def format_response(data: Any, message: str = "Успешно") -> Dict[str, Any
 async def send_message(chat_id: str, text: str):
     """Отправляет сообщение через MAX API."""
     url = f"{MAX_API_URL}/messages"
-    headers = {"Authorization": MAX_BOT_TOKEN}
+    headers = {
+        "Authorization": f"Bearer {MAX_BOT_TOKEN}",  # <-- ВАЖНО: добавить "Bearer "
+        "Content-Type": "application/json"
+    }
     payload = {
-        "user_id": chat_id,  # Вместо chat_id используем user_id
+        "user_id": chat_id,
         "text": text
     }
     
@@ -165,15 +168,24 @@ async def send_message(chat_id: str, text: str):
         return None
 
 async def send_photo(chat_id: str, photo_url: str, caption: Optional[str] = None):
-    """Отправляет фото через MAX API."""
-    url = f"{MAX_API_URL}/sendPhoto"
-    headers = {"Authorization": MAX_BOT_TOKEN}
+    url = f"{MAX_API_URL}/messages"
+    headers = {
+        "Authorization": f"Bearer {MAX_BOT_TOKEN}",
+        "Content-Type": "application/json"
+    }
     payload = {
-        "chat_id": chat_id,
-        "photo": photo_url
+        "user_id": chat_id,
+        "attachments": [
+            {
+                "type": "image",
+                "payload": {
+                    "url": photo_url
+                }
+            }
+        ]
     }
     if caption:
-        payload["caption"] = caption
+        payload["text"] = caption
     
     try:
         async with httpx.AsyncClient(verify=False) as client:
