@@ -113,6 +113,15 @@ class ReportRequest(BaseModel):
     """Запрос на генерацию отчета."""
     username: str = Field(..., description="Имя пользователя")
 
+class MaxWebhookRequest(BaseModel):
+    """Модель входящего запроса от MAX."""
+    update_type: Optional[str] = None
+    timestamp: Optional[int] = None
+    chat_id: Optional[str] = None
+    user: Optional[Dict[str, Any]] = None
+    message: Optional[Dict[str, Any]] = None
+    payload: Optional[str] = None
+
 # ==================== FastAPI приложение ====================
 
 app = FastAPI(
@@ -172,6 +181,8 @@ async def health():
     """Проверка состояния сервера."""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
+# ==================== Webhook для MAX ====================
+
 @app.post("/webhook")
 async def max_webhook(request: Request):
     """
@@ -179,23 +190,174 @@ async def max_webhook(request: Request):
     Сюда MAX будет отправлять все сообщения от пользователей.
     """
     try:
+        # Получаем данные от MAX
         data = await request.json()
         logger.info(f"📨 Получен webhook от MAX: {data}")
         
-        # Здесь будет логика обработки сообщений
-        # Пока просто возвращаем OK
+        # Извлекаем тип обновления
+        update_type = data.get("update_type")
         
+        # Обрабатываем разные типы событий
+        if update_type == "bot_started":
+            # Пользователь запустил бота (в т.ч. по диплинку)
+            user_info = data.get("user", {})
+            chat_id = data.get("chat_id")
+            payload = data.get("payload")
+            
+            logger.info(f"👤 Бот запущен пользователем {user_info.get('name')} (ID: {user_info.get('user_id')})")
+            if payload:
+                logger.info(f"📎 Payload: {payload}")
+            
+            # Отправляем приветственное сообщение
+            await send_message(
+                chat_id,
+                "👋 Привет! Я астрологический бот.\n\n"
+                "Я помогу тебе:\n"
+                "📊 Рассчитать натальную карту\n"
+                "🔮 Узнать ежедневный прогноз\n"
+                "🌞 Получить солярное возвращение\n"
+                "💑 Проверить совместимость\n\n"
+                "Для начала напиши /start"
+            )
+            
+        elif update_type == "message_created":
+            # Новое сообщение от пользователя
+            message_data = data.get("message", {})
+            chat_id = data.get("chat", {}).get("id") or data.get("chat_id")
+            text = message_data.get("text", "")
+            
+            logger.info(f"💬 Сообщение от {chat_id}: {text}")
+            
+            # Простая обработка команд
+            if text and text.startswith("/"):
+                await handle_command(chat_id, text)
+            else:
+                # Если не команда, отправляем подсказку
+                await send_message(
+                    chat_id,
+                    "🤔 Я не совсем понял. Напиши /help для списка доступных команд."
+                )
+                
+        elif update_type == "callback_query":
+            # Нажатие на inline-кнопку
+            callback_data = data.get("data")
+            chat_id = data.get("chat_id")
+            logger.info(f"🔘 Нажата кнопка: {callback_data}")
+            
+            # Обрабатываем callback
+            await handle_callback(chat_id, callback_data)
+            
+        else:
+            # Другие типы событий (неизвестные)
+            logger.info(f"ℹ️ Получено событие типа: {update_type}")
+        
+        # Возвращаем успешный ответ MAX
         return {
             "status": "ok",
-            "message": "Webhook received",
+            "message": "Webhook processed",
             "timestamp": datetime.now().isoformat()
         }
+        
     except Exception as e:
         logger.error(f"❌ Ошибка обработки webhook: {e}")
         return JSONResponse(
             status_code=500,
             content={"status": "error", "detail": str(e)}
         )
+
+# ==================== Функции для работы с MAX API ====================
+
+MAX_BOT_TOKEN = os.environ.get("MAX_BOT_TOKEN", "f9LHodD0cOI7akoq3U7PCyihj1qMFmDjRtDKVoIxhtz99oOOHCEkZfey_KnSzJi4gdtbiU9TgtjD5CDbwAVH")
+MAX_API_URL = "https://platform-api2.max.ru"
+
+async def send_message(chat_id: str, text: str):
+    """Отправляет сообщение через MAX API."""
+    import httpx
+    url = f"{MAX_API_URL}/sendMessage"
+    headers = {"Authorization": MAX_BOT_TOKEN}
+    payload = {
+        "chat_id": chat_id,
+        "text": text
+    }
+    
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=payload, headers=headers)
+            logger.info(f"📤 Сообщение отправлено в {chat_id}: {text[:50]}...")
+            return response.json()
+    except Exception as e:
+        logger.error(f"❌ Ошибка отправки сообщения: {e}")
+        return None
+
+async def send_photo(chat_id: str, photo_url: str, caption: Optional[str] = None):
+    """Отправляет фото через MAX API."""
+    import httpx
+    url = f"{MAX_API_URL}/sendPhoto"
+    headers = {"Authorization": MAX_BOT_TOKEN}
+    payload = {
+        "chat_id": chat_id,
+        "photo": photo_url
+    }
+    if caption:
+        payload["caption"] = caption
+    
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=payload, headers=headers)
+            logger.info(f"🖼️ Фото отправлено в {chat_id}")
+            return response.json()
+    except Exception as e:
+        logger.error(f"❌ Ошибка отправки фото: {e}")
+        return None
+
+async def handle_command(chat_id: str, text: str):
+    """Обрабатывает команды."""
+    if text == "/start":
+        await send_message(
+            chat_id,
+            "👋 Добро пожаловать!\n\n"
+            "Я астрологический бот. Вот что я умею:\n"
+            "/natal - рассчитать натальную карту\n"
+            "/transits - ежедневный прогноз\n"
+            "/solar - солярное возвращение\n"
+            "/report - полный отчет\n"
+            "/help - помощь"
+        )
+    elif text == "/help":
+        await send_message(
+            chat_id,
+            "📚 Доступные команды:\n\n"
+            "/natal - натальная карта\n"
+            "/transits - транзиты на сегодня\n"
+            "/solar - солярное возвращение\n"
+            "/report - полный отчет\n"
+            "/help - эта справка"
+        )
+    elif text == "/natal":
+        await send_message(
+            chat_id,
+            "🔮 Расчет натальной карты...\n\n"
+            "Сначала зарегистрируй свои данные: /register"
+        )
+    elif text == "/register":
+        await send_message(
+            chat_id,
+            "📝 Давай создадим твой профиль!\n\n"
+            "Напиши свое имя:"
+        )
+    else:
+        await send_message(
+            chat_id,
+            f"🤔 Неизвестная команда: {text}\n"
+            "Напиши /help для списка команд."
+        )
+
+async def handle_callback(chat_id: str, callback_data: str):
+    """Обрабатывает callback от inline-кнопок."""
+    await send_message(
+        chat_id,
+        f"🔘 Вы нажали кнопку: {callback_data}"
+    )
 
 # ==================== Пользователи ====================
 

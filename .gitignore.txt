@@ -154,3 +154,6 @@ webserver_config.py
 .terraform/
 *.tfvars
 *.tfvars.json
+
+# For BotHost
+astrology_bot/
