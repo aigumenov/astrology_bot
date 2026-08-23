@@ -158,20 +158,16 @@ async def send_message(chat_id: str, text: str):
     """Отправляет сообщение через MAX API."""
     url = f"{MAX_API_URL}/messages"
     headers = {
-        "Authorization": f"Bearer {MAX_BOT_TOKEN}",
+        "Authorization": MAX_BOT_TOKEN,
         "Content-Type": "application/json"
     }
     payload = {
-        "user_id": chat_id,
+        "chat_id": chat_id,  # <-- Используем chat_id вместо user_id
         "text": text
     }
     
     try:
-        # Логируем токен для отладки
-        logger.info(f"📤 Отправка в {chat_id}: токен {MAX_BOT_TOKEN[:20]}...")
-        logger.info(f"📤 URL: {url}")
-        logger.info(f"📤 Headers: {headers}")
-        logger.info(f"📤 Payload: {payload}")
+        logger.info(f"📤 Отправка в chat_id {chat_id}: {text[:50]}...")
         
         async with httpx.AsyncClient(verify=False) as client:
             response = await client.post(url, json=payload, headers=headers)
@@ -236,6 +232,7 @@ async def handle_command(chat_id: str, text: str):
             "/report - полный отчет\n"
             "/help - эта справка"
         )
+    # ... остальные команды
     elif text == "/natal":
         await send_message(
             chat_id,
