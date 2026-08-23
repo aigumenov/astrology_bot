@@ -2,11 +2,6 @@
 """
 FastAPI сервер для астрологического бота
 Адаптирован для работы на Bothost
-
-Запуск:
-    python api.py
-    # или через uvicorn (Bothost использует порт 3000)
-    uvicorn api:app --host 0.0.0.0 --port 3000
 """
 
 import json
@@ -21,6 +16,7 @@ from fastapi import FastAPI, HTTPException, Request, Query
 from fastapi.responses import JSONResponse, PlainTextResponse, FileResponse
 from pydantic import BaseModel, Field
 import uvicorn
+import httpx
 
 # Добавляем путь к проекту
 sys.path.insert(0, str(Path(__file__).parent))
@@ -46,6 +42,11 @@ logger = logging.getLogger(__name__)
 
 # Инициализация репозитория
 user_repo = UserRepository()
+
+# ==================== Конфигурация MAX API ====================
+
+MAX_BOT_TOKEN = os.environ.get("MAX_BOT_TOKEN", "f9LHodD0cOI7akoq3U7PCyihj1qMFmDjRtDKVoIxhtz99oOOHCEkZfey_KnSzJi4gdtbiU9TgtjD5CDbwAVH")
+MAX_API_URL = "https://platform-api2.max.ru"
 
 # ==================== Pydantic модели ====================
 
@@ -113,15 +114,6 @@ class ReportRequest(BaseModel):
     """Запрос на генерацию отчета."""
     username: str = Field(..., description="Имя пользователя")
 
-class MaxWebhookRequest(BaseModel):
-    """Модель входящего запроса от MAX."""
-    update_type: Optional[str] = None
-    timestamp: Optional[int] = None
-    chat_id: Optional[str] = None
-    user: Optional[Dict[str, Any]] = None
-    message: Optional[Dict[str, Any]] = None
-    payload: Optional[str] = None
-
 # ==================== FastAPI приложение ====================
 
 app = FastAPI(
@@ -148,6 +140,99 @@ def format_response(data: Any, message: str = "Успешно") -> Dict[str, Any
         "message": message,
         "data": data
     }
+
+# ==================== Функции для работы с MAX API ====================
+
+async def send_message(chat_id: str, text: str):
+    """Отправляет сообщение через MAX API."""
+    url = f"{MAX_API_URL}/sendMessage"
+    headers = {"Authorization": MAX_BOT_TOKEN}
+    payload = {
+        "chat_id": chat_id,
+        "text": text
+    }
+    
+    try:
+        # verify=False для обхода SSL ошибки (временно)
+        async with httpx.AsyncClient(verify=False) as client:
+            response = await client.post(url, json=payload, headers=headers)
+            if response.status_code == 200:
+                logger.info(f"📤 Сообщение отправлено в {chat_id}: {text[:50]}...")
+            else:
+                logger.error(f"❌ Ошибка отправки: {response.status_code} - {response.text}")
+            return response.json()
+    except Exception as e:
+        logger.error(f"❌ Ошибка отправки сообщения: {e}")
+        return None
+
+async def send_photo(chat_id: str, photo_url: str, caption: Optional[str] = None):
+    """Отправляет фото через MAX API."""
+    url = f"{MAX_API_URL}/sendPhoto"
+    headers = {"Authorization": MAX_BOT_TOKEN}
+    payload = {
+        "chat_id": chat_id,
+        "photo": photo_url
+    }
+    if caption:
+        payload["caption"] = caption
+    
+    try:
+        async with httpx.AsyncClient(verify=False) as client:
+            response = await client.post(url, json=payload, headers=headers)
+            logger.info(f"🖼️ Фото отправлено в {chat_id}")
+            return response.json()
+    except Exception as e:
+        logger.error(f"❌ Ошибка отправки фото: {e}")
+        return None
+
+async def handle_command(chat_id: str, text: str):
+    """Обрабатывает команды."""
+    if text == "/start":
+        await send_message(
+            chat_id,
+            "👋 Добро пожаловать!\n\n"
+            "Я астрологический бот. Вот что я умею:\n"
+            "/natal - рассчитать натальную карту\n"
+            "/transits - ежедневный прогноз\n"
+            "/solar - солярное возвращение\n"
+            "/report - полный отчет\n"
+            "/help - помощь"
+        )
+    elif text == "/help":
+        await send_message(
+            chat_id,
+            "📚 Доступные команды:\n\n"
+            "/natal - натальная карта\n"
+            "/transits - транзиты на сегодня\n"
+            "/solar - солярное возвращение\n"
+            "/report - полный отчет\n"
+            "/help - эта справка"
+        )
+    elif text == "/natal":
+        await send_message(
+            chat_id,
+            "🔮 Расчет натальной карты...\n\n"
+            "Сначала зарегистрируй свои данные: /register"
+        )
+    elif text == "/register":
+        await send_message(
+            chat_id,
+            "📝 Давай создадим твой профиль!\n\n"
+            "Напиши свое имя:"
+        )
+    else:
+        await send_message(
+            chat_id,
+            f"🤔 Неизвестная команда: {text}\n"
+            "Напиши /help для списка команд."
+        )
+
+async def handle_callback(chat_id: str, callback_data: str):
+    """Обрабатывает callback от inline-кнопок."""
+    await send_message(
+        chat_id,
+        f"🔘 Вы нажали кнопку: {callback_data}"
+    )
 
 # ==================== Базовые эндпоинты ====================
 
@@ -208,7 +293,6 @@ async def max_webhook(request: Request):
             if payload:
                 logger.info(f"📎 Payload: {payload}")
             
-            # Отправляем приветственное сообщение
             await send_message(
                 chat_id,
                 "👋 Привет! Я астрологический бот.\n\n"
@@ -223,16 +307,21 @@ async def max_webhook(request: Request):
         elif update_type == "message_created":
             # Новое сообщение от пользователя
             message_data = data.get("message", {})
-            chat_id = data.get("chat", {}).get("id") or data.get("chat_id")
-            text = message_data.get("text", "")
+            
+            # Извлекаем chat_id из sender или recipient
+            sender = message_data.get("sender", {})
+            recipient = message_data.get("recipient", {})
+            chat_id = sender.get("user_id") or recipient.get("chat_id")
+            
+            # Извлекаем текст из body
+            body = message_data.get("body", {})
+            text = body.get("text", "")
             
             logger.info(f"💬 Сообщение от {chat_id}: {text}")
             
-            # Простая обработка команд
             if text and text.startswith("/"):
                 await handle_command(chat_id, text)
             else:
-                # Если не команда, отправляем подсказку
                 await send_message(
                     chat_id,
                     "🤔 Я не совсем понял. Напиши /help для списка доступных команд."
@@ -243,12 +332,10 @@ async def max_webhook(request: Request):
             callback_data = data.get("data")
             chat_id = data.get("chat_id")
             logger.info(f"🔘 Нажата кнопка: {callback_data}")
-            
-            # Обрабатываем callback
             await handle_callback(chat_id, callback_data)
             
         else:
-            # Другие типы событий (неизвестные)
+            # Другие типы событий
             logger.info(f"ℹ️ Получено событие типа: {update_type}")
         
         # Возвращаем успешный ответ MAX
@@ -264,100 +351,6 @@ async def max_webhook(request: Request):
             status_code=500,
             content={"status": "error", "detail": str(e)}
         )
-
-# ==================== Функции для работы с MAX API ====================
-
-MAX_BOT_TOKEN = os.environ.get("MAX_BOT_TOKEN", "f9LHodD0cOI7akoq3U7PCyihj1qMFmDjRtDKVoIxhtz99oOOHCEkZfey_KnSzJi4gdtbiU9TgtjD5CDbwAVH")
-MAX_API_URL = "https://platform-api2.max.ru"
-
-async def send_message(chat_id: str, text: str):
-    """Отправляет сообщение через MAX API."""
-    import httpx
-    url = f"{MAX_API_URL}/sendMessage"
-    headers = {"Authorization": MAX_BOT_TOKEN}
-    payload = {
-        "chat_id": chat_id,
-        "text": text
-    }
-    
-    try:
-        async with httpx.AsyncClient() as client:
-            response = await client.post(url, json=payload, headers=headers)
-            logger.info(f"📤 Сообщение отправлено в {chat_id}: {text[:50]}...")
-            return response.json()
-    except Exception as e:
-        logger.error(f"❌ Ошибка отправки сообщения: {e}")
-        return None
-
-async def send_photo(chat_id: str, photo_url: str, caption: Optional[str] = None):
-    """Отправляет фото через MAX API."""
-    import httpx
-    url = f"{MAX_API_URL}/sendPhoto"
-    headers = {"Authorization": MAX_BOT_TOKEN}
-    payload = {
-        "chat_id": chat_id,
-        "photo": photo_url
-    }
-    if caption:
-        payload["caption"] = caption
-    
-    try:
-        async with httpx.AsyncClient() as client:
-            response = await client.post(url, json=payload, headers=headers)
-            logger.info(f"🖼️ Фото отправлено в {chat_id}")
-            return response.json()
-    except Exception as e:
-        logger.error(f"❌ Ошибка отправки фото: {e}")
-        return None
-
-async def handle_command(chat_id: str, text: str):
-    """Обрабатывает команды."""
-    if text == "/start":
-        await send_message(
-            chat_id,
-            "👋 Добро пожаловать!\n\n"
-            "Я астрологический бот. Вот что я умею:\n"
-            "/natal - рассчитать натальную карту\n"
-            "/transits - ежедневный прогноз\n"
-            "/solar - солярное возвращение\n"
-            "/report - полный отчет\n"
-            "/help - помощь"
-        )
-    elif text == "/help":
-        await send_message(
-            chat_id,
-            "📚 Доступные команды:\n\n"
-            "/natal - натальная карта\n"
-            "/transits - транзиты на сегодня\n"
-            "/solar - солярное возвращение\n"
-            "/report - полный отчет\n"
-            "/help - эта справка"
-        )
-    elif text == "/natal":
-        await send_message(
-            chat_id,
-            "🔮 Расчет натальной карты...\n\n"
-            "Сначала зарегистрируй свои данные: /register"
-        )
-    elif text == "/register":
-        await send_message(
-            chat_id,
-            "📝 Давай создадим твой профиль!\n\n"
-            "Напиши свое имя:"
-        )
-    else:
-        await send_message(
-            chat_id,
-            f"🤔 Неизвестная команда: {text}\n"
-            "Напиши /help для списка команд."
-        )
-
-async def handle_callback(chat_id: str, callback_data: str):
-    """Обрабатывает callback от inline-кнопок."""
-    await send_message(
-        chat_id,
-        f"🔘 Вы нажали кнопку: {callback_data}"
-    )
 
 # ==================== Пользователи ====================
 
@@ -600,17 +593,10 @@ async def generate_report(request: ReportRequest):
     try:
         user_data = load_user(request.username)
         
-        # Натальная карта
         chart_data = NatalCalculator.calculate(user_data)
-        
-        # Аспекты
         subject = SubjectFactory.create_subject_from_user_data(user_data)
         aspects = AspectsCalculator.calculate_single_chart_aspects(subject)
-        
-        # Транзиты
         transits = TransitsCalculator.calculate_current_transits(user_data)
-        
-        # Солярное возвращение
         next_year = datetime.now().year + 1
         solar = ReturnsCalculator.calculate_solar_return(
             user_data=user_data,
@@ -650,7 +636,6 @@ async def generate_report(request: ReportRequest):
             }
         }
         
-        # Сохраняем отчет
         user_dir = user_repo.get_user_dir(request.username)
         report_file = user_dir / f"{request.username}_report.json"
         with open(report_file, 'w', encoding='utf-8') as f:
@@ -666,9 +651,6 @@ async def generate_report(request: ReportRequest):
 # ==================== Запуск для Bothost ====================
 
 if __name__ == "__main__":
-    import os
-    
-    # Bothost использует порт 3000 или переменную PORT
     port = int(os.environ.get("PORT", 3000))
     
     logger.info(f"🚀 Запуск сервера на порту {port}")
@@ -677,7 +659,7 @@ if __name__ == "__main__":
     
     uvicorn.run(
         "api:app",
-        host="0.0.0.0",  # Обязательно для Bothost
+        host="0.0.0.0",
         port=port,
-        reload=False  # На сервере reload не нужен
+        reload=False
     )
