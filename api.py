@@ -147,7 +147,7 @@ async def send_message(chat_id: str, text: str):
     """Отправляет сообщение через MAX API."""
     url = f"{MAX_API_URL}/messages"
     headers = {
-        "Authorization": f"Bearer {MAX_BOT_TOKEN}",  # <-- ВАЖНО: добавить "Bearer "
+        "Authorization": f"Bearer {MAX_BOT_TOKEN}",
         "Content-Type": "application/json"
     }
     payload = {
@@ -166,7 +166,7 @@ async def send_message(chat_id: str, text: str):
     except Exception as e:
         logger.error(f"❌ Ошибка отправки сообщения: {e}")
         return None
-
+    
 async def send_photo(chat_id: str, photo_url: str, caption: Optional[str] = None):
     url = f"{MAX_API_URL}/messages"
     headers = {
