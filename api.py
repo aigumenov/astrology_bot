@@ -156,6 +156,9 @@ async def send_message(chat_id: str, text: str):
     }
     
     try:
+        # ДОБАВЬТЕ ЭТУ СТРОКУ ДЛЯ ЛОГИРОВАНИЯ
+        logger.info(f"📤 Отправка в {chat_id}: токен {MAX_BOT_TOKEN[:20]}...")
+        
         async with httpx.AsyncClient(verify=False) as client:
             response = await client.post(url, json=payload, headers=headers)
             if response.status_code == 200:
