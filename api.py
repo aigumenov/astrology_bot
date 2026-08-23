@@ -187,7 +187,7 @@ async def send_message(chat_id: str, text: str):
 async def send_photo(chat_id: str, photo_url: str, caption: Optional[str] = None):
     url = f"{MAX_API_URL}/messages"
     headers = {
-        "Authorization": f"Bearer {MAX_BOT_TOKEN}",
+        "Authorization": MAX_BOT_TOKEN,
         "Content-Type": "application/json"
     }
     payload = {
