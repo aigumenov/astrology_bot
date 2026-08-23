@@ -45,8 +45,19 @@ user_repo = UserRepository()
 
 # ==================== Конфигурация MAX API ====================
 
-MAX_BOT_TOKEN = os.environ.get("MAX_BOT_TOKEN", "f9LHodD0cOI7akoq3U7PCyihj1qMFmDjRtDKVoIxhtz99oOOHCEkZfey_KnSzJi4gdtbiU9TgtjD5CDbwAVH")
+# Получаем токен из переменных окружения
+MAX_BOT_TOKEN = os.environ.get("MAX_BOT_TOKEN")
+
+# Если токен не найден или пустой, используем fallback
+if not MAX_BOT_TOKEN:
+    MAX_BOT_TOKEN = "f9LHodD0cOI7akoq3U7PCyihj1qMFmDjRtDKVoIxhtz99oOOHCEkZfey_KnSzJi4gdtbiU9TgtjD5CDbwAVH"
+    logger.warning("⚠️ Токен загружен из fallback-значения (не из переменных окружения)")
+
 MAX_API_URL = "https://platform-api2.max.ru"
+
+logger.info(f"🔑 Токен загружен: {MAX_BOT_TOKEN[:20]}...")
+
+
 
 # ==================== Pydantic модели ====================
 
@@ -156,8 +167,11 @@ async def send_message(chat_id: str, text: str):
     }
     
     try:
-        # ДОБАВЬТЕ ЭТУ СТРОКУ ДЛЯ ЛОГИРОВАНИЯ
+        # Логируем токен для отладки
         logger.info(f"📤 Отправка в {chat_id}: токен {MAX_BOT_TOKEN[:20]}...")
+        logger.info(f"📤 URL: {url}")
+        logger.info(f"📤 Headers: {headers}")
+        logger.info(f"📤 Payload: {payload}")
         
         async with httpx.AsyncClient(verify=False) as client:
             response = await client.post(url, json=payload, headers=headers)
